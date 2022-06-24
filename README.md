@@ -1,3 +1,5 @@
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Harshil-Jani/demo-education-registry)
+
 # edu-core-registries
 Edu Core Registries (reference https://docs.sunbirdrc.dev/example-use-cases/edu-registries) 
 
