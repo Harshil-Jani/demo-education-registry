@@ -1,0 +1,998 @@
+Attaching to demo-education-registry_claim-ms_1, demo-education-registry_registry_1, demo-education-registry_keycloak_1, demo-education-registry_db_1, demo-education-registry_redis_1, demo-education-registry_es_1, demo-education-registry_file-storage_1
+[33mdb_1            |[0m 
+[33mdb_1            |[0m PostgreSQL Database directory appears to contain a database; Skipping initialization
+[33mdb_1            |[0m 
+[33mdb_1            |[0m 2022-06-30 19:03:17.031 UTC [1] LOG:  starting PostgreSQL 14.3 (Debian 14.3-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+[33mdb_1            |[0m 2022-06-30 19:03:17.032 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+[33mdb_1            |[0m 2022-06-30 19:03:17.032 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+[33mdb_1            |[0m 2022-06-30 19:03:17.034 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+[33mdb_1            |[0m 2022-06-30 19:03:17.038 UTC [26] LOG:  database system was shut down at 2022-06-30 19:03:09 UTC
+[33mdb_1            |[0m 2022-06-30 19:03:17.044 UTC [1] LOG:  database system is ready to accept connections
+[33mdb_1            |[0m 2022-06-30 19:09:00.989 UTC [33] ERROR:  duplicate key value violates unique constraint "sibling_names"
+[33mdb_1            |[0m 2022-06-30 19:09:00.989 UTC [33] DETAIL:  Key (realm_id, parent_group, name)=(sunbird-rc,  , Teacher) already exists.
+[33mdb_1            |[0m 2022-06-30 19:09:00.989 UTC [33] STATEMENT:  insert into public.KEYCLOAK_GROUP (NAME, PARENT_GROUP, REALM_ID, ID) values ($1, $2, $3, $4)
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestedOn` : value = null
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestedOn`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestorEntity` : value = Teacher
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestorEntity`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `conditions` : value = (ATTESTOR#$.experience.[*].instituteOSID#.contains(conditions))
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`conditions`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `createdAt` : value = 2022-06-30 19:09:02.402
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`createdAt`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `entity` : value = Student
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`entity`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `entityId` : value = 1-d75cce12-d454-4236-bf4e-2292c8a0c93a
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`entityId`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `propertyData` : value = {"name":"Test 15211627537","educationDetails":[{"institute":"Some other school","osid":"1-7e0b377f-5c0c-448b-965a-88abf742b6dd"}]}
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`propertyData`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `propertyURI` : value = 
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`propertyURI`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `requestorName` : value = null
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`requestorName`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.694 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `status` : value = OPEN
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.695 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Attribute (`status`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.695 DEBUG 1 --- [nio-8082-exec-5] o.h.engine.internal.TwoPhaseLoad         : Done materializing entity [dev.sunbirdrc.claim.entity.Claim#baa892c5-0cd8-4beb-823f-2ba2571bdebf]
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.695  INFO 1 --- [nio-8082-exec-5] d.sunbirdrc.claim.service.ClaimService   : Found 2 claims to process
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.695  INFO 1 --- [nio-8082-exec-5] d.s.r.m.s.ConditionResolverService       : Gonna resolve for the json {"osUpdatedAt":"2022-06-30T19:09:01.739Z","osUpdatedBy":"18b62521-36fe-4420-bda2-1255d1e106c8","subject":"Electrical Kernel","osid":"1-a10aa255-7302-4474-b26a-add5c802dd51","osOwner":["18b62521-36fe-4420-bda2-1255d1e106c8"],"phoneNumber":"72390","osCreatedAt":"2022-06-30T19:09:01.080Z","school":"NIT Surat","contactDetails":{"osid":"1-da134aca-8515-4bfc-8a29-008128ff82ef","osUpdatedAt":"2022-06-30T19:09:01.739Z","osCreatedAt":"2022-06-30T19:09:01.080Z","osUpdatedBy":"18b62521-36fe-4420-bda2-1255d1e106c8","mobile":"15211627537","osCreatedBy":"","name":"test name 15211627537","email":"15211627537@example.com"},"personalDetails":{"osid":"1-8889dc4f-d359-4b23-9ebb-0a515f05a6ff","osUpdatedAt":"2022-06-30T19:09:01.739Z","osCreatedAt":"2022-06-30T19:09:01.080Z","osUpdatedBy":"18b62521-36fe-4420-bda2-1255d1e106c8","dob":"2020-12-12","osCreatedBy":"","userName":"15211627537"},"name":"Harshil","osCreatedBy":"","experience":[{"osUpdatedAt":"2022-06-30T19:09:01.739Z","osUpdatedBy":"18b62521-36fe-4420-bda2-1255d1e106c8","institute":"Some other school","osid":"1-a2805145-7f55-4a04-affb-1b2757de375a"}],"identityDetails":{"osid":"1-522d4138-354f-4504-8f35-f38d74368d68","osUpdatedAt":"2022-06-30T19:09:01.739Z","osCreatedAt":"2022-06-30T19:09:01.080Z","osUpdatedBy":"18b62521-36fe-4420-bda2-1255d1e106c8","osCreatedBy":"","type":"id","value":"15211627537"},"email":"haj@1234.com"}
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.695  INFO 1 --- [nio-8082-exec-5] d.s.r.m.s.ConditionResolverService       : Condition after replacing the entries (ATTESTOR#$.experience.[*].instituteOSID#.contains({}))
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.696 DEBUG 1 --- [nio-8082-exec-5] c.j.jsonpath.internal.path.CompiledPath  : Evaluating path: $['experience'][*]['instituteOSID']
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.696  INFO 1 --- [nio-8082-exec-5] d.s.r.m.s.ConditionResolverService       : Processing pairs condition (ATTESTOR#$.experience.[*].instituteOSID#.contains({})) -> pairs ATTESTOR#$.experience.[*].instituteOSID#, {}
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.696  INFO 1 --- [nio-8082-exec-5] d.s.r.m.s.ConditionResolverService       : Resolved conditions ({}.contains({}))
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.696  INFO 1 --- [nio-8082-exec-5] d.s.r.m.s.ConditionResolverService       : Gonna resolve for the json {"osUpdatedAt":"2022-06-30T19:09:01.739Z","osUpdatedBy":"18b62521-36fe-4420-bda2-1255d1e106c8","subject":"Electrical Kernel","osid":"1-a10aa255-7302-4474-b26a-add5c802dd51","osOwner":["18b62521-36fe-4420-bda2-1255d1e106c8"],"phoneNumber":"72390","osCreatedAt":"2022-06-30T19:09:01.080Z","school":"NIT Surat","contactDetails":{"osid":"1-da134aca-8515-4bfc-8a29-008128ff82ef","osUpdatedAt":"2022-06-30T19:09:01.739Z","osCreatedAt":"2022-06-30T19:09:01.080Z","osUpdatedBy":"18b62521-36fe-4420-bda2-1255d1e106c8","mobile":"15211627537","osCreatedBy":"","name":"test name 15211627537","email":"15211627537@example.com"},"personalDetails":{"osid":"1-8889dc4f-d359-4b23-9ebb-0a515f05a6ff","osUpdatedAt":"2022-06-30T19:09:01.739Z","osCreatedAt":"2022-06-30T19:09:01.080Z","osUpdatedBy":"18b62521-36fe-4420-bda2-1255d1e106c8","dob":"2020-12-12","osCreatedBy":"","userName":"15211627537"},"name":"Harshil","osCreatedBy":"","experience":[{"osUpdatedAt":"2022-06-30T19:09:01.739Z","osUpdatedBy":"18b62521-36fe-4420-bda2-1255d1e106c8","institute":"Some other school","osid":"1-a2805145-7f55-4a04-affb-1b2757de375a"}],"identityDetails":{"osid":"1-522d4138-354f-4504-8f35-f38d74368d68","osUpdatedAt":"2022-06-30T19:09:01.739Z","osCreatedAt":"2022-06-30T19:09:01.080Z","osUpdatedBy":"18b62521-36fe-4420-bda2-1255d1e106c8","osCreatedBy":"","type":"id","value":"15211627537"},"email":"haj@1234.com"}
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.696  INFO 1 --- [nio-8082-exec-5] d.s.r.m.s.ConditionResolverService       : Condition after replacing the entries (ATTESTOR#$.experience.[*].instituteOSID#.contains({}))
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.697 DEBUG 1 --- [nio-8082-exec-5] c.j.jsonpath.internal.path.CompiledPath  : Evaluating path: $['experience'][*]['instituteOSID']
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.697  INFO 1 --- [nio-8082-exec-5] d.s.r.m.s.ConditionResolverService       : Processing pairs condition (ATTESTOR#$.experience.[*].instituteOSID#.contains({})) -> pairs ATTESTOR#$.experience.[*].instituteOSID#, {}
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.697  INFO 1 --- [nio-8082-exec-5] d.s.r.m.s.ConditionResolverService       : Resolved conditions ({}.contains({}))
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.698 DEBUG 1 --- [nio-8082-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, application/x-jackson-smile, application/cbor, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json]
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.698 DEBUG 1 --- [nio-8082-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.700 DEBUG 1 --- [nio-8082-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.700 DEBUG 1 --- [nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.701 DEBUG 1 --- [nio-8082-exec-5] o.a.coyote.http11.Http11InputBuffer      : Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [313]
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.701 DEBUG 1 --- [nio-8082-exec-5] o.a.tomcat.util.net.SocketWrapperBase    : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@10466654:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56316]], Read from buffer: [0]
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.702 DEBUG 1 --- [nio-8082-exec-5] org.apache.tomcat.util.net.NioEndpoint   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@10466654:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56316]], Read direct from socket: [0]
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.702 DEBUG 1 --- [nio-8082-exec-5] o.a.coyote.http11.Http11InputBuffer      : Received []
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.702 DEBUG 1 --- [nio-8082-exec-5] o.apache.coyote.http11.Http11Processor   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@10466654:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56316]], Status in: [OPEN_READ], State out: [OPEN]
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:02.702 DEBUG 1 --- [nio-8082-exec-5] org.apache.tomcat.util.net.NioEndpoint   : Registered read interest for [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@10466654:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56316]]
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:23.552 DEBUG 1 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:23.552 DEBUG 1 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:52.485 DEBUG 1 --- [alina-utility-1] org.apache.catalina.session.ManagerBase  : Start expire sessions StandardManager at 1656616192485 sessioncount 0
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:52.485 DEBUG 1 --- [alina-utility-1] org.apache.catalina.session.ManagerBase  : End expire sessions StandardManager processingTime 0 expired sessions: 0
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:53.552 DEBUG 1 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+[36mclaim-ms_1      |[0m 2022-06-30 19:09:53.552 DEBUG 1 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:02.771 DEBUG 1 --- [nio-8082-exec-6] o.apache.tomcat.util.threads.LimitLatch  : Counting down[http-nio-8082-exec-6] latch=1
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:02.771 DEBUG 1 --- [nio-8082-exec-6] org.apache.tomcat.util.net.NioEndpoint   : Calling [org.apache.tomcat.util.net.NioEndpoint@2f0620cb].closeSocket([org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@10466654:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56316]])
+[35mfile-storage_1  |[0m Automatically configured API requests per node based on available memory on the system: 228
+[35mfile-storage_1  |[0m Finished loading IAM sub-system (took 0.0s of 0.0s to load data).
+[35mfile-storage_1  |[0m Status:         1 Online, 0 Offline. 
+[35mfile-storage_1  |[0m API: http://0.0.0.0:9000 
+[35mfile-storage_1  |[0m 
+[35mfile-storage_1  |[0m Console: http://0.0.0.0:9001 
+[35mfile-storage_1  |[0m 
+[35mfile-storage_1  |[0m Documentation: https://docs.min.io
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,474Z", "level": "WARN", "component": "o.e.b.BootstrapChecks", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]" }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,481Z", "level": "INFO", "component": "o.e.c.c.Coordinator", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "setting initial configuration to VotingConfiguration{CpUaaTRLRYyxuT4y4diGUA}" }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,665Z", "level": "INFO", "component": "o.e.c.s.MasterService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "elected-as-master ([1] nodes joined)[{285bd1cb2f5e}{CpUaaTRLRYyxuT4y4diGUA}{m91Bq1ApRQeU_GWjA9GJWg}{172.20.0.4}{172.20.0.4:9300}{cdhilmrstw}{ml.machine_memory=16065634304, xpack.installed=true, transform.node=true, ml.max_open_jobs=20} elect leader, _BECOME_MASTER_TASK_, _FINISH_ELECTION_], term: 1, version: 1, delta: master node changed {previous [], current [{285bd1cb2f5e}{CpUaaTRLRYyxuT4y4diGUA}{m91Bq1ApRQeU_GWjA9GJWg}{172.20.0.4}{172.20.0.4:9300}{cdhilmrstw}{ml.machine_memory=16065634304, xpack.installed=true, transform.node=true, ml.max_open_jobs=20}]}" }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,698Z", "level": "INFO", "component": "o.e.c.c.CoordinationState", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "cluster UUID set to [fJcuRHeXSdKM-TEk48pcvA]" }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,721Z", "level": "INFO", "component": "o.e.c.s.ClusterApplierService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "master node changed {previous [], current [{285bd1cb2f5e}{CpUaaTRLRYyxuT4y4diGUA}{m91Bq1ApRQeU_GWjA9GJWg}{172.20.0.4}{172.20.0.4:9300}{cdhilmrstw}{ml.machine_memory=16065634304, xpack.installed=true, transform.node=true, ml.max_open_jobs=20}]}, term: 1, version: 1, reason: Publication{term=1, version=1}" }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,746Z", "level": "INFO", "component": "o.e.h.AbstractHttpServerTransport", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "publish_address {172.20.0.4:9200}, bound_addresses {0.0.0.0:9200}", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,747Z", "level": "INFO", "component": "o.e.n.Node", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "started", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,757Z", "level": "INFO", "component": "o.e.x.c.t.IndexTemplateRegistry", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding legacy template [.ml-anomalies-] for [ml], because it doesn't exist", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,758Z", "level": "INFO", "component": "o.e.x.c.t.IndexTemplateRegistry", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding legacy template [.ml-state] for [ml], because it doesn't exist", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,758Z", "level": "INFO", "component": "o.e.x.c.t.IndexTemplateRegistry", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding legacy template [.ml-config] for [ml], because it doesn't exist", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,759Z", "level": "INFO", "component": "o.e.x.c.t.IndexTemplateRegistry", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding legacy template [.ml-inference-000003] for [ml], because it doesn't exist", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,759Z", "level": "INFO", "component": "o.e.x.c.t.IndexTemplateRegistry", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding legacy template [.ml-meta] for [ml], because it doesn't exist", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,759Z", "level": "INFO", "component": "o.e.x.c.t.IndexTemplateRegistry", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding legacy template [.ml-notifications-000001] for [ml], because it doesn't exist", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,760Z", "level": "INFO", "component": "o.e.x.c.t.IndexTemplateRegistry", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding legacy template [.ml-stats] for [ml], because it doesn't exist", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,835Z", "level": "INFO", "component": "o.e.g.GatewayService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "recovered [0] indices into cluster_state", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:30,957Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.ml-state] for index patterns [.ml-state*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,020Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.ml-notifications-000001] for index patterns [.ml-notifications-000001]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,075Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.ml-anomalies-] for index patterns [.ml-anomalies-*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,108Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.ml-inference-000003] for index patterns [.ml-inference-000003]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,146Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.ml-stats] for index patterns [.ml-stats-*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,188Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.ml-config] for index patterns [.ml-config]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,221Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.ml-meta] for index patterns [.ml-meta]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,255Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding component template [metrics-settings]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,293Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding component template [synthetics-settings]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,322Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding component template [logs-settings]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,356Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding component template [logs-mappings]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,395Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding component template [synthetics-mappings]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,428Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding component template [metrics-mappings]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,484Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index template [.triggered_watches] for index patterns [.triggered_watches*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,524Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index template [.watch-history-12] for index patterns [.watcher-history-12*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,555Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index template [.watches] for index patterns [.watches*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,592Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index template [ilm-history] for index patterns [ilm-history-3*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,625Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index template [.slm-history] for index patterns [.slm-history-3*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,662Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.monitoring-alerts-7] for index patterns [.monitoring-alerts-7]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,710Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.monitoring-es] for index patterns [.monitoring-es-7-*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,752Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.monitoring-kibana] for index patterns [.monitoring-kibana-7-*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,793Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.monitoring-logstash] for index patterns [.monitoring-logstash-7-*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,831Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding template [.monitoring-beats] for index patterns [.monitoring-beats-7-*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,871Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index template [logs] for index patterns [logs-*-*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,926Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index template [synthetics] for index patterns [synthetics-*-*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,964Z", "level": "INFO", "component": "o.e.c.m.MetadataIndexTemplateService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index template [metrics] for index patterns [metrics-*-*]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:31,992Z", "level": "INFO", "component": "o.e.x.i.a.TransportPutLifecycleAction", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index lifecycle policy [ml-size-based-ilm-policy]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:32,034Z", "level": "INFO", "component": "o.e.x.i.a.TransportPutLifecycleAction", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index lifecycle policy [synthetics]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:32,061Z", "level": "INFO", "component": "o.e.x.i.a.TransportPutLifecycleAction", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index lifecycle policy [metrics]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:32,085Z", "level": "INFO", "component": "o.e.x.i.a.TransportPutLifecycleAction", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index lifecycle policy [logs]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:32,114Z", "level": "INFO", "component": "o.e.x.i.a.TransportPutLifecycleAction", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index lifecycle policy [watch-history-ilm-policy]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:32,144Z", "level": "INFO", "component": "o.e.x.i.a.TransportPutLifecycleAction", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index lifecycle policy [ilm-history-ilm-policy]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:32,175Z", "level": "INFO", "component": "o.e.x.i.a.TransportPutLifecycleAction", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "adding index lifecycle policy [slm-history-ilm-policy]", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:32,266Z", "level": "INFO", "component": "o.e.l.LicenseService", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "license [f6de2bef-33ad-4b99-9ca6-0bb8136e6a12] mode [basic] - valid", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[32mes_1            |[0m {"type": "server", "timestamp": "2022-06-30T19:03:32,267Z", "level": "INFO", "component": "o.e.x.s.s.SecurityStatusChangeListener", "cluster.name": "docker-cluster", "node.name": "285bd1cb2f5e", "message": "Active license is now [BASIC]; Security is disabled", "cluster.uuid": "fJcuRHeXSdKM-TEk48pcvA", "node.id": "CpUaaTRLRYyxuT4y4diGUA"  }
+[36;1mredis_1         |[0m 1:C 30 Jun 2022 19:03:16.677 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[36;1mredis_1         |[0m 1:C 30 Jun 2022 19:03:16.677 # Redis version=7.0.0, bits=64, commit=00000000, modified=0, pid=1, just started
+[36;1mredis_1         |[0m 1:C 30 Jun 2022 19:03:16.677 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+[36;1mredis_1         |[0m 1:M 30 Jun 2022 19:03:16.678 * monotonic clock: POSIX clock_gettime
+[36;1mredis_1         |[0m 1:M 30 Jun 2022 19:03:16.678 * Running mode=standalone, port=6379.
+[36;1mredis_1         |[0m 1:M 30 Jun 2022 19:03:16.678 # Server initialized
+[36;1mredis_1         |[0m 1:M 30 Jun 2022 19:03:16.678 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[36;1mredis_1         |[0m 1:M 30 Jun 2022 19:03:16.679 * The AOF directory appendonlydir doesn't exist
+[36;1mredis_1         |[0m 1:M 30 Jun 2022 19:03:16.679 * Ready to accept connections
+[34mkeycloak_1      |[0m [0m[0m19:03:34,755 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 68) WFLYCLINF0002: Started clientSessions cache from keycloak container
+[34mkeycloak_1      |[0m [0m[0m19:03:34,772 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 64) WFLYCLINF0002: Started realms cache from keycloak container
+[34mkeycloak_1      |[0m [0m[0m19:03:34,772 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 70) WFLYCLINF0002: Started authorization cache from keycloak container
+[34mkeycloak_1      |[0m [0m[0m19:03:34,772 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 69) WFLYCLINF0002: Started keys cache from keycloak container
+[34mkeycloak_1      |[0m [0m[0m19:03:34,772 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 66) WFLYCLINF0002: Started users cache from keycloak container
+[34mkeycloak_1      |[0m [0m[33m19:03:34,877 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0273: Excluded subsystem webservices via jboss-deployment-structure.xml does not exist.
+[34mkeycloak_1      |[0m [0m[0m19:03:35,400 INFO  [org.keycloak.services] (ServerService Thread Pool -- 60) KC-SERVICES0001: Loading config from standalone.xml or domain.xml
+[34mkeycloak_1      |[0m [0m[33m19:03:35,594 WARN  [org.keycloak.services] (ServerService Thread Pool -- 60) KC-SERVICES0047: mobile-otp-login (in.divoc.api.authenticator.MobileNumberAuthenticatorFactory) is implementing the internal SPI authenticator. This SPI is internal and may change without notice
+[34mkeycloak_1      |[0m [0m[0m19:03:35,778 INFO  [org.keycloak.url.DefaultHostnameProviderFactory] (ServerService Thread Pool -- 60) Frontend: <request>, Admin: <frontend>, Backend: <request>
+[34mkeycloak_1      |[0m [0m[0m19:03:35,943 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 60) WFLYCLINF0002: Started realmRevisions cache from keycloak container
+[34mkeycloak_1      |[0m [0m[0m19:03:35,952 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 60) WFLYCLINF0002: Started userRevisions cache from keycloak container
+[34mkeycloak_1      |[0m [0m[0m19:03:35,960 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 60) WFLYCLINF0002: Started authorizationRevisions cache from keycloak container
+[34mkeycloak_1      |[0m [0m[0m19:03:35,962 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (ServerService Thread Pool -- 60) Node name: 70e64132467a, Site name: null
+[34mkeycloak_1      |[0m [0m[0m19:03:36,816 INFO  [org.keycloak.connections.jpa.DefaultJpaConnectionProviderFactory] (ServerService Thread Pool -- 60) Database info: {databaseUrl=jdbc:postgresql://db:5432/registry, databaseUser=postgres, databaseProduct=PostgreSQL 14.3 (Debian 14.3-1.pgdg110+1), databaseDriver=PostgreSQL JDBC Driver 42.2.5}
+[34mkeycloak_1      |[0m [0m[0m19:03:37,843 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 60) HHH000204: Processing PersistenceUnitInfo [
+[34mkeycloak_1      |[0m 	name: keycloak-default
+[34mkeycloak_1      |[0m 	...]
+[34mkeycloak_1      |[0m [0m[0m19:03:37,882 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 60) HHH000412: Hibernate Core {5.3.20.Final}
+[34mkeycloak_1      |[0m [0m[0m19:03:37,883 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 60) HHH000206: hibernate.properties not found
+[34mkeycloak_1      |[0m [0m[0m19:03:37,962 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 60) HCANN000001: Hibernate Commons Annotations {5.0.5.Final}
+[34mkeycloak_1      |[0m [0m[0m19:03:38,095 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 60) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+[34mkeycloak_1      |[0m [0m[0m19:03:38,278 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 60) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[34mkeycloak_1      |[0m [0m[0m19:03:38,282 INFO  [org.hibernate.type.BasicTypeRegistry] (ServerService Thread Pool -- 60) HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@27891e27
+[34mkeycloak_1      |[0m [0m[0m19:03:38,286 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 60) Envers integration enabled? : true
+[34mkeycloak_1      |[0m [0m[0m19:03:38,656 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 60) HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+[34mkeycloak_1      |[0m [0m[0m19:03:38,709 INFO  [org.hibernate.validator.internal.util.Version] (ServerService Thread Pool -- 60) HV000001: Hibernate Validator 6.0.22.Final
+[34mkeycloak_1      |[0m [0m[0m19:03:39,645 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 60) HHH000397: Using ASTQueryTranslatorFactory
+[34mkeycloak_1      |[0m [0m[0m19:03:40,473 INFO  [org.keycloak.services] (ServerService Thread Pool -- 60) KC-SERVICES0003: Not importing realm sunbird-rc from file /opt/jboss/keycloak/imports/realm-export.json.  It already exists.
+[34mkeycloak_1      |[0m [0m[0m19:03:40,483 INFO  [org.keycloak.services] (ServerService Thread Pool -- 60) KC-SERVICES0003: Not importing realm sunbird-rc from file /opt/jboss/keycloak/imports/realm-export.json.  It already exists.
+[34mkeycloak_1      |[0m [0m[0m19:03:40,487 INFO  [org.keycloak.services] (ServerService Thread Pool -- 60) KC-SERVICES0006: Importing users from '/opt/jboss/keycloak/standalone/configuration/keycloak-add-user.json'
+[34mkeycloak_1      |[0m [0m[33m19:03:40,515 WARN  [org.keycloak.services] (ServerService Thread Pool -- 60) KC-SERVICES0104: Not creating user admin. It already exists.
+[34mkeycloak_1      |[0m [0m[0m19:03:40,565 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 60) RESTEASY002225: Deploying javax.ws.rs.core.Application: class org.keycloak.services.resources.KeycloakApplication
+[34mkeycloak_1      |[0m [0m[0m19:03:40,565 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 60) RESTEASY002205: Adding provider class org.keycloak.services.error.KeycloakErrorHandler from Application class org.keycloak.services.resources.KeycloakApplication
+[34mkeycloak_1      |[0m [0m[0m19:03:40,566 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 60) RESTEASY002200: Adding class resource org.keycloak.services.resources.JsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[34mkeycloak_1      |[0m [0m[0m19:03:40,566 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 60) RESTEASY002200: Adding class resource org.keycloak.services.resources.ThemeResource from Application class org.keycloak.services.resources.KeycloakApplication
+[34mkeycloak_1      |[0m [0m[0m19:03:40,567 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 60) RESTEASY002205: Adding provider class org.keycloak.services.filters.KeycloakSecurityHeadersFilter from Application class org.keycloak.services.resources.KeycloakApplication
+[34mkeycloak_1      |[0m [0m[0m19:03:40,567 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 60) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.RobotsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[34mkeycloak_1      |[0m [0m[0m19:03:40,567 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 60) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.RealmsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[34mkeycloak_1      |[0m [0m[0m19:03:40,567 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 60) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.WelcomeResource from Application class org.keycloak.services.resources.KeycloakApplication
+[34mkeycloak_1      |[0m [0m[0m19:03:40,567 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 60) RESTEASY002210: Adding provider singleton org.keycloak.services.util.ObjectMapperResolver from Application class org.keycloak.services.resources.KeycloakApplication
+[34mkeycloak_1      |[0m [0m[0m19:03:40,567 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 60) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.admin.AdminRoot from Application class org.keycloak.services.resources.KeycloakApplication
+[34mkeycloak_1      |[0m [0m[0m19:03:40,627 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 60) WFLYUT0021: Registered web context: '/auth' for server 'default-server'
+[34mkeycloak_1      |[0m [0m[0m19:03:40,728 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 46) WFLYSRV0010: Deployed "keycloak-server.war" (runtime-name : "keycloak-server.war")
+[34mkeycloak_1      |[0m [0m[0m19:03:40,787 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[34mkeycloak_1      |[0m [0m[0m19:03:40,791 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Keycloak 14.0.0 (WildFly Core 15.0.1.Final) started in 13971ms - Started 693 of 978 services (686 services are lazy, passive or on-demand)
+[34mkeycloak_1      |[0m [0m[0m19:03:40,793 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+[34mkeycloak_1      |[0m [0m[0m19:03:40,793 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+[34mkeycloak_1      |[0m [0m[33m19:09:00,991 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (default task-1) SQL Error: 0, SQLState: 23505
+[34mkeycloak_1      |[0m [0m[31m19:09:00,991 ERROR [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (default task-1) ERROR: duplicate key value violates unique constraint "sibling_names"
+[34mkeycloak_1      |[0m   Detail: Key (realm_id, parent_group, name)=(sunbird-rc,  , Teacher) already exists.
+[33;1mregistry_1      |[0m 19:09:02.371 [http-nio-8081-exec-5] ERROR d.s.registry.dao.RegistryDaoImpl:116 - Unexpected input passed here.
+[33;1mregistry_1      |[0m 19:09:02.374 [http-nio-8081-exec-5] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-d75cce12-d454-4236-bf4e-2292c8a0c93a
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:09:02.374] [sunbirdrc-actors-rr-dispatcher-15] [akka://sunbirdrc-actors/user/OSActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to OSActor
+[33;1mregistry_1      |[0m 19:09:02.390 [http-nio-8081-exec-5] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:09:02.391 [http-nio-8081-exec-5] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:09:02.391 [http-nio-8081-exec-5] INFO  d.s.r.m.s.ConditionResolverService:32 - Gonna resolve for the json {"name":"Test 15211627537","educationDetails":[{"institute":"Some other school","osid":"1-7e0b377f-5c0c-448b-965a-88abf742b6dd"}]}
+[33;1mregistry_1      |[0m 19:09:02.391 [http-nio-8081-exec-5] INFO  d.s.r.m.s.ConditionResolverService:84 - Condition after replacing the entries (ATTESTOR#$.experience.[*].instituteOSID#.contains(REQUESTER#$.educationDetails.*.instituteOSID#))
+[33;1mregistry_1      |[0m 19:09:02.392 [http-nio-8081-exec-5] INFO  d.s.r.m.s.ConditionResolverService:89 - Processing pairs condition (ATTESTOR#$.experience.[*].instituteOSID#.contains(REQUESTER#$.educationDetails.*.instituteOSID#)) -> pairs REQUESTER#$.educationDetails.*.instituteOSID#, {}
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:09:02.393] [sunbirdrc-actors-rr-dispatcher-15] [akka://sunbirdrc-actors/user/ClaimPluginActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to ClaimPluginActor
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:09:02.410] [sunbirdrc-actors-rr-dispatcher-15] [akka://sunbirdrc-actors/user/ClaimPluginActor/$a] Claim has successfully risen {"id":"baa892c5-0cd8-4beb-823f-2ba2571bdebf","entity":"Student","entityId":"1-d75cce12-d454-4236-bf4e-2292c8a0c93a","propertyURI":"","createdAt":"2022-06-30T19:09:02.402+00:00","attestedOn":null,"status":"OPEN","conditions":"(ATTESTOR#$.experience.[*].instituteOSID#.contains({}))","attestorEntity":"Teacher","requestorName":null,"propertyData":"{\"name\":\"Test 15211627537\",\"educationDetails\":[{\"institute\":\"Some other school\",\"osid\":\"1-7e0b377f-5c0c-448b-965a-88abf742b6dd\"}]}","attestationId":"1-f81b65bd-a539-4aa9-bd70-a237633dff81","attestationName":"studentInstituteAttest","closed":false}
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:09:02.412] [sunbirdrc-actors-rr-dispatcher-15] [akka://sunbirdrc-actors/user/PluginResponseActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to PluginResponseActor
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:09:02.412] [sunbirdrc-actors-rr-dispatcher-15] [akka://sunbirdrc-actors/user/PluginResponseActor/$a] PluginResponseMessage(policyName=studentInstituteAttest, sourceEntity=Student, sourceOSID=1-d75cce12-d454-4236-bf4e-2292c8a0c93a, attestationOSID=1-f81b65bd-a539-4aa9-bd70-a237633dff81, attestorPlugin=did:internal:ClaimPluginActor?entity=Teacher, response=null, signedData=null, additionalData={"claimId":"baa892c5-0cd8-4beb-823f-2ba2571bdebf"}, status=RAISE_CLAIM, date=Thu Jun 30 19:09:02 GMT 2022, validUntil=Thu Jun 30 19:09:02 GMT 2022, version=, files=[])
+[33;1mregistry_1      |[0m 19:09:02.430 [http-nio-8081-exec-8] INFO  d.s.r.c.RegistryEntityController:600 - Got system request to update attestation property Student 1-d75cce12-d454-4236-bf4e-2292c8a0c93a studentInstituteAttest 1-f81b65bd-a539-4aa9-bd70-a237633dff81
+[33;1mregistry_1      |[0m 19:09:02.431 [http-nio-8081-exec-8] INFO  d.s.r.c.RegistryEntityController:607 - updateAttestationProperty: {"policyName":"studentInstituteAttest","sourceEntity":"Student","sourceOSID":"1-d75cce12-d454-4236-bf4e-2292c8a0c93a","attestationOSID":"1-f81b65bd-a539-4aa9-bd70-a237633dff81","attestorPlugin":"did:internal:ClaimPluginActor?entity=Teacher","response":null,"signedData":null,"additionalData":{"claimId":"baa892c5-0cd8-4beb-823f-2ba2571bdebf"},"status":"RAISE_CLAIM","date":1656616142410,"validUntil":1656616142410,"version":"","files":[],"osid":"1-d75cce12-d454-4236-bf4e-2292c8a0c93a"}
+[33;1mregistry_1      |[0m 19:09:02.432 [http-nio-8081-exec-8] WARN  d.s.registry.service.ISearchService:66 - Populates SearchQuery for limit/offset(optional): null
+[33;1mregistry_1      |[0m 19:09:02.434 [http-nio-8081-exec-8] ERROR dev.sunbirdrc.pojos.RequestWrapper:39 - Can't read from http stream. Set body empty
+[33;1mregistry_1      |[0m 19:09:02.435 [http-nio-8081-exec-8] ERROR dev.sunbirdrc.pojos.APIMessage:44 - Can't read request body
+[33;1mregistry_1      |[0m 19:09:02.437 [http-nio-8081-exec-8] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-d75cce12-d454-4236-bf4e-2292c8a0c93a
+[33;1mregistry_1      |[0m 19:09:02.445 [http-nio-8081-exec-9] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-d75cce12-d454-4236-bf4e-2292c8a0c93a
+[33;1mregistry_1      |[0m 19:09:02.462 [http-nio-8081-exec-8] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:09:02.463 [http-nio-8081-exec-8] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:09:02.471 [http-nio-8081-exec-8] INFO  dev.sunbirdrc.workflow.StateContext:52 - setting metadata _osState : "ATTESTATION_REQUESTED"
+[33;1mregistry_1      |[0m 19:09:02.471 [http-nio-8081-exec-8] INFO  dev.sunbirdrc.workflow.StateContext:52 - setting metadata _osClaimId : "baa892c5-0cd8-4beb-823f-2ba2571bdebf"
+[33;1mregistry_1      |[0m 19:09:02.473 [http-nio-8081-exec-8] INFO  d.s.registry.sink.shard.ShardManager:43 - Activated shard shard1 for attribute value null
+[33;1mregistry_1      |[0m 19:09:02.474 [http-nio-8081-exec-8] INFO  d.s.registry.helper.RegistryHelper:356 - Update Api: shard id: 1 for uuid: d75cce12-d454-4236-bf4e-2292c8a0c93a
+[33;1mregistry_1      |[0m 19:09:02.474 [http-nio-8081-exec-8] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osCreatedAt not valid!
+[33;1mregistry_1      |[0m 19:09:02.475 [http-nio-8081-exec-8] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osUpdatedAt not valid!
+[33;1mregistry_1      |[0m 19:09:02.475 [http-nio-8081-exec-8] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osCreatedBy not valid!
+[33;1mregistry_1      |[0m 19:09:02.475 [http-nio-8081-exec-8] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osUpdatedBy not valid!
+[33;1mregistry_1      |[0m 19:09:02.493 [http-nio-8081-exec-9] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:09:02.493 [http-nio-8081-exec-9] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:09:02.494 [http-nio-8081-exec-9] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-d75cce12-d454-4236-bf4e-2292c8a0c93a
+[33;1mregistry_1      |[0m 19:09:02.499 [http-nio-8081-exec-8] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:09:02.500 [http-nio-8081-exec-8] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:09:02.501 [http-nio-8081-exec-8] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update educationDetails
+[33;1mregistry_1      |[0m 19:09:02.501 [http-nio-8081-exec-8] ERROR d.s.registry.dao.RegistryDaoImpl:116 - Unexpected input passed here.
+[33;1mregistry_1      |[0m 19:09:02.502 [http-nio-8081-exec-8] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update studentInstituteAttest
+[33;1mregistry_1      |[0m 19:09:02.503 [http-nio-8081-exec-8] ERROR d.s.registry.dao.RegistryDaoImpl:116 - Unexpected input passed here.
+[33;1mregistry_1      |[0m 19:09:02.504 [http-nio-8081-exec-8] INFO  d.s.r.s.impl.RegistryServiceImpl:456 - Object node identityDetails={"osid":"c76afd32-b5ef-41e4-8c2e-65cbd09be1ba","gender":"Male","fullName":"Test 15211627537"}
+[33;1mregistry_1      |[0m 19:09:02.504 [http-nio-8081-exec-8] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update gender
+[33;1mregistry_1      |[0m 19:09:02.504 [http-nio-8081-exec-8] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update fullName
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:09:02.507] [sunbirdrc-actors-rr-dispatcher-14] [akka://sunbirdrc-actors/user/OSActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to OSActor
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:09:02.508] [sunbirdrc-actors-rr-dispatcher-15] [akka://sunbirdrc-actors/user/PluginResponseActor/$a] Update status api call's status 200 OK
+[33;1mregistry_1      |[0m 19:09:02.522 [http-nio-8081-exec-9] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:09:02.523 [http-nio-8081-exec-9] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:09:02.524 [http-nio-8081-exec-9] INFO  d.s.r.c.RegistryEntityController:493 - ReadEntity,1-d75cce12-d454-4236-bf4e-2292c8a0c93a,dev.sunbirdrc.registry.transform.Data@65a20026
+[33;1mregistry_1      |[0m 19:09:02.642 [http-nio-8081-exec-1] WARN  d.s.registry.service.ISearchService:66 - Populates SearchQuery for limit/offset(optional): null
+[33;1mregistry_1      |[0m 19:09:02.679 [http-nio-8081-exec-1] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:09:02.682 [http-nio-8081-exec-1] ERROR dev.sunbirdrc.pojos.APIMessage:44 - Can't read request body
+[33;1mregistry_1      |[0m 19:09:02.701 [http-nio-8081-exec-1] INFO  d.s.r.c.RegistryClaimsController:65 - Received 0 claims
+[33;1mregistry_1      |[0m 19:10:09.267 [http-nio-8081-exec-5] ERROR d.s.registry.util.RefResolver:81 - Fetching definition of $ref #/definitions/Address failed
+[33;1mregistry_1      |[0m java.lang.NullPointerException: null
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.util.RefResolver.extractDefinition(RefResolver.java:92)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.util.RefResolver.fetchDefinition(RefResolver.java:77)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.util.RefResolver.resolveDefinitions(RefResolver.java:45)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.util.RefResolver.resolveDefinitions(RefResolver.java:65)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.util.RefResolver.resolveDefinitions(RefResolver.java:65)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.controller.RegistrySwaggerController.getSwaggerDoc(RegistrySwaggerController.java:55)
+[33;1mregistry_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[33;1mregistry_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[33;1mregistry_1      |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[33;1mregistry_1      |[0m 	at java.lang.reflect.Method.invoke(Method.java:498)
+[33;1mregistry_1      |[0m 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+[33;1mregistry_1      |[0m 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+[33;1mregistry_1      |[0m 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+[33;1mregistry_1      |[0m 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter.doFilter(KeycloakAuthenticatedActionsFilter.java:57)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter.doFilter(KeycloakSecurityContextRequestFilter.java:61)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter.doFilter(KeycloakPreAuthActionsFilter.java:96)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter.doFilter(KeycloakAuthenticatedActionsFilter.java:74)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter.doFilter(KeycloakSecurityContextRequestFilter.java:92)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter.doFilter(KeycloakPreAuthActionsFilter.java:96)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.tomcat.AbstractAuthenticatedActionsValve.invoke(AbstractAuthenticatedActionsValve.java:67)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.tomcat.AbstractKeycloakAuthenticatorValve.invoke(AbstractKeycloakAuthenticatorValve.java:181)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+[33;1mregistry_1      |[0m 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+[33;1mregistry_1      |[0m 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+[33;1mregistry_1      |[0m 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+[33;1mregistry_1      |[0m 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+[33;1mregistry_1      |[0m 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+[33;1mregistry_1      |[0m 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+[33;1mregistry_1      |[0m 	at java.lang.Thread.run(Thread.java:748)
+[33;1mregistry_1      |[0m 19:10:09.494 [http-nio-8081-exec-8] INFO  d.s.registry.util.RefResolver:34 - {"Institute":{"$id":"#/properties/Institute","type":"object","title":"The Institute Schema","required":[],"properties":{"instituteName":{"$id":"#/properties/instituteName","type":"string","title":"Institute Name"},"address":{"type":"object","required":[],"properties":{"plot":{"type":"string","title":"Plot"},"street":{"type":"string","title":"Street"},"landmark":{"type":"string","title":"Landmark"},"locality":{"type":"string","title":"Locality"},"state":{"type":"string","title":"State","enum":["Andaman and Nicobar Islands","Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chandigarh","Chhattisgarh","Dadra and Nagar Haveli","Daman and Diu","Delhi","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu and Kashmir","Jharkhand","Karnataka","Kerala","Ladakh","Lakshadweep","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Puducherry","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal"]},"district":{"type":"string","title":"District"},"village":{"type":"string","title":"Village/Town/City"},"pincode":{"type":"string","title":"Pincode"}}},"establishmentYear":{"$id":"#/properties/establishmentYear","type":"string","title":"Year of establishment of institute"},"gstnId":{"$id":"#/properties/gstnId","type":"string","title":"GSTN ID"},"contactNumber":{"$id":"#/properties/contactNumber","type":"string","title":"Landline / Mobile"},"email":{"$id":"#/properties/email","type":"string","format":"email","title":"Email"},"website":{"$id":"#/properties/website","type":"string","format":"uri","title":"Website"},"category":{"$id":"#/properties/category","type":"string","title":"Institute Category (Primary/Secondary etc)","enum":["Primary","Secondary"]},"schoolType":{"$id":"#/properties/schoolType","type":"string","title":"School Type ","enum":["Boys","Girls","Co-ed"]},"instituteManagement":{"$id":"#/properties/instituteManagement","type":"string","title":"Management of institute"},"committee":{"$id":"#/properties/instituteManagement","type":"string","title":"Name of Trust / Society / Managing Committee"},"adminName":{"$id":"#/properties/adminName","type":"string","title":"Principal / Dean / Head - Full Name"},"adminEmail":{"$id":"#/properties/adminEmail","type":"string","title":"Principal / Dean / Head - Email"},"adminMobile":{"$id":"#/properties/adminMobile","type":"string","title":"Principal / Dean / Head - Mobile"},"affiliation":{"type":"array","items":{"type":"object","properties":{"medium":{"type":"string","enum":["English","Hindi","Gujarati","Malayalam","Tamil"],"title":"Medium of Education"},"board":{"type":"string","title":"Affiliations Board"},"affiliationNumber":{"type":"string","title":"Affiliation Number"},"grantYear":{"type":"string","title":"Grant year"},"expiryYear":{"type":"string","title":"Expiry Year"},"classes":{"type":"array","items":{"type":"string","enum":["Pre-Pri.","Class I","Class II","Class III","Class IV","Class V","Class VI","Class VII","Class VIII","Class IX","Class X","Class XI","Class XII"]},"title":"Classes / Grades"}}},"title":"Affiliation"}}}}
+[33;1mregistry_1      |[0m 19:10:09.955 [http-nio-8081-exec-7] INFO  d.s.r.c.RegistryEntityController:67 - Inviting entity {"name":"Harshil","phoneNumber":"72390","email":"haj@1234.com","subject":"Electrical Kernel","school":"NIT Surat","personalDetails":{"userName":"37851914666","dob":"2020-12-12"},"identityDetails":{"type":"id","value":"37851914666"},"contactDetails":{"mobile":"37851914666","email":"37851914666@example.com","address":{"street":"abc","state":"Karnataka","pincode":"560001"}}}
+[33;1mregistry_1      |[0m 19:10:09.957 [http-nio-8081-exec-7] WARN  d.s.registry.service.ISearchService:66 - Populates SearchQuery for limit/offset(optional): null
+[33;1mregistry_1      |[0m 19:10:09.959 [http-nio-8081-exec-7] ERROR dev.sunbirdrc.pojos.RequestWrapper:39 - Can't read from http stream. Set body empty
+[33;1mregistry_1      |[0m 19:10:09.960 [http-nio-8081-exec-7] ERROR dev.sunbirdrc.pojos.APIMessage:44 - Can't read request body
+[33;1mregistry_1      |[0m 19:10:09.960 [http-nio-8081-exec-7] INFO  d.s.r.helper.EntityStateHelper:65 - Detecting state changes by comparing attestation paths in existing and the updated nodes
+[33;1mregistry_1      |[0m 19:10:09.961 [http-nio-8081-exec-7] INFO  d.s.r.helper.EntityStateHelper:130 - Updated nodes of interest: []
+[33;1mregistry_1      |[0m 19:10:09.962 [http-nio-8081-exec-7] INFO  d.s.r.helper.EntityStateHelper:130 - Updated nodes of interest: []
+[33;1mregistry_1      |[0m 19:10:09.962 [http-nio-8081-exec-7] INFO  d.s.keycloak.KeycloakAdminUtil:67 - Creating user with mobile_number : 37851914666
+[33mdb_1            |[0m 2022-06-30 19:10:09.978 UTC [33] ERROR:  duplicate key value violates unique constraint "sibling_names"
+[33mdb_1            |[0m 2022-06-30 19:10:09.978 UTC [33] DETAIL:  Key (realm_id, parent_group, name)=(sunbird-rc,  , Teacher) already exists.
+[33mdb_1            |[0m 2022-06-30 19:10:09.978 UTC [33] STATEMENT:  insert into public.KEYCLOAK_GROUP (NAME, PARENT_GROUP, REALM_ID, ID) values ($1, $2, $3, $4)
+[34mkeycloak_1      |[0m [0m[33m19:10:09,979 WARN  [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (default task-1) SQL Error: 0, SQLState: 23505
+[34mkeycloak_1      |[0m [0m[31m19:10:09,979 ERROR [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] (default task-1) ERROR: duplicate key value violates unique constraint "sibling_names"
+[34mkeycloak_1      |[0m   Detail: Key (realm_id, parent_group, name)=(sunbird-rc,  , Teacher) already exists.
+[33;1mregistry_1      |[0m 19:10:10.045 [http-nio-8081-exec-7] INFO  d.s.keycloak.KeycloakAdminUtil:74 - Response |  Status: 201 | Status Info: Created
+[33;1mregistry_1      |[0m 19:10:10.046 [http-nio-8081-exec-7] INFO  d.s.keycloak.KeycloakAdminUtil:75 - User ID path/auth/admin/realms/sunbird-rc/users/d638006b-bfa4-411a-84eb-c1dc176101ee
+[33;1mregistry_1      |[0m 19:10:10.046 [http-nio-8081-exec-7] INFO  d.s.keycloak.KeycloakAdminUtil:77 - User ID : d638006b-bfa4-411a-84eb-c1dc176101ee
+[33;1mregistry_1      |[0m 19:10:10.046 [http-nio-8081-exec-7] INFO  d.s.registry.helper.RegistryHelper:223 - Add api: entity type: Teacher and shard propery: none
+[33;1mregistry_1      |[0m 19:10:10.047 [http-nio-8081-exec-7] INFO  d.s.registry.sink.shard.ShardManager:43 - Activated shard shard1 for attribute value null
+[33;1mregistry_1      |[0m 19:10:10.070 [IndexThread-2] INFO  d.s.registry.util.EntityParenter:232 - Adding index to shard: shard1 for definition: Teacher
+[33;1mregistry_1      |[0m 19:10:10.070 [IndexThread-2] ERROR d.s.registry.util.EntityParenter:271 - No value present
+[33;1mregistry_1      |[0m 19:10:10.070 [IndexThread-2] ERROR d.s.registry.util.EntityParenter:272 - Failed Transaction creating index Teacher
+[33;1mregistry_1      |[0m 19:10:10.071 [http-nio-8081-exec-7] INFO  d.s.registry.helper.RegistryHelper:229 - AddEntity,1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:10.072] [sunbirdrc-actors-rr-dispatcher-19] [akka://sunbirdrc-actors/user/OSActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to OSActor
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:10.073] [sunbirdrc-actors-rr-dispatcher-20] [akka://sunbirdrc-actors/user/NotificationActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to NotificationActor
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:10.076] [sunbirdrc-actors-rr-dispatcher-19] [akka://sunbirdrc-actors/user/NotificationActor/$b] SEND message from akka://sunbirdrc-actors/user/SBRouter to NotificationActor
+[33;1mregistry_1      |[0m [ERROR] [06/30/2022 19:10:10.077] [sunbirdrc-actors-akka.actor.internal-dispatcher-22] [akka://sunbirdrc-actors/user/NotificationActor] Failed to connect to localhost/127.0.0.1:8765
+[33;1mregistry_1      |[0m java.net.ConnectException: Failed to connect to localhost/127.0.0.1:8765
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:297)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:207)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.actors.services.NotificationService.callNotificationService(NotificationService.java:26)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.actors.NotificationActor.onReceive(NotificationActor.java:21)
+[33;1mregistry_1      |[0m 	at org.sunbird.akka.core.BaseActor.onReceive(BaseActor.java:84)
+[33;1mregistry_1      |[0m 	at akka.actor.UntypedAbstractActor$$anonfun$receive$1.applyOrElse(AbstractActor.scala:339)
+[33;1mregistry_1      |[0m 	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+[33;1mregistry_1      |[0m 	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+[33;1mregistry_1      |[0m 	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:227)
+[33;1mregistry_1      |[0m 	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:610)
+[33;1mregistry_1      |[0m 	at akka.actor.ActorCell.invoke(ActorCell.scala:580)
+[33;1mregistry_1      |[0m 	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+[33;1mregistry_1      |[0m 	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+[33;1mregistry_1      |[0m 	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+[33;1mregistry_1      |[0m Caused by: java.net.ConnectException: Connection refused (Connection refused)
+[33;1mregistry_1      |[0m 	at java.net.PlainSocketImpl.socketConnect(Native Method)
+[33;1mregistry_1      |[0m 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+[33;1mregistry_1      |[0m 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+[33;1mregistry_1      |[0m 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+[33;1mregistry_1      |[0m 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+[33;1mregistry_1      |[0m 	at java.net.Socket.connect(Socket.java:589)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:120)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295)
+[33;1mregistry_1      |[0m 	... 31 more
+[33;1mregistry_1      |[0m 
+[33;1mregistry_1      |[0m [ERROR] [06/30/2022 19:10:10.080] [sunbirdrc-actors-akka.actor.internal-dispatcher-22] [akka://sunbirdrc-actors/user/NotificationActor] Failed to connect to localhost/127.0.0.1:8765
+[33;1mregistry_1      |[0m java.net.ConnectException: Failed to connect to localhost/127.0.0.1:8765
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:297)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealConnection.connect(RealConnection.kt:207)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.kt:226)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:106)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.kt:74)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealCall.initExchange$okhttp(RealCall.kt:255)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:32)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.actors.services.NotificationService.callNotificationService(NotificationService.java:26)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.actors.NotificationActor.onReceive(NotificationActor.java:21)
+[33;1mregistry_1      |[0m 	at org.sunbird.akka.core.BaseActor.onReceive(BaseActor.java:84)
+[33;1mregistry_1      |[0m 	at akka.actor.UntypedAbstractActor$$anonfun$receive$1.applyOrElse(AbstractActor.scala:339)
+[33;1mregistry_1      |[0m 	at akka.actor.Actor.aroundReceive(Actor.scala:539)
+[33;1mregistry_1      |[0m 	at akka.actor.Actor.aroundReceive$(Actor.scala:537)
+[33;1mregistry_1      |[0m 	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:227)
+[33;1mregistry_1      |[0m 	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:610)
+[33;1mregistry_1      |[0m 	at akka.actor.ActorCell.invoke(ActorCell.scala:580)
+[33;1mregistry_1      |[0m 	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:268)
+[33;1mregistry_1      |[0m 	at akka.dispatch.Mailbox.run(Mailbox.scala:229)
+[33;1mregistry_1      |[0m 	at akka.dispatch.Mailbox.exec(Mailbox.scala:241)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+[33;1mregistry_1      |[0m Caused by: java.net.ConnectException: Connection refused (Connection refused)
+[33;1mregistry_1      |[0m 	at java.net.PlainSocketImpl.socketConnect(Native Method)
+[33;1mregistry_1      |[0m 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+[33;1mregistry_1      |[0m 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+[33;1mregistry_1      |[0m 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+[33;1mregistry_1      |[0m 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+[33;1mregistry_1      |[0m 	at java.net.Socket.connect(Socket.java:589)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.platform.Platform.connectSocket(Platform.kt:120)
+[33;1mregistry_1      |[0m 	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.kt:295)
+[33;1mregistry_1      |[0m 	... 31 more
+[33;1mregistry_1      |[0m 
+[33;1mregistry_1      |[0m 19:10:10.367 [http-nio-8081-exec-3] ERROR d.s.registry.util.RefResolver:81 - Fetching definition of $ref #/definitions/Address failed
+[33;1mregistry_1      |[0m java.lang.NullPointerException: null
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.util.RefResolver.extractDefinition(RefResolver.java:92)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.util.RefResolver.fetchDefinition(RefResolver.java:77)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.util.RefResolver.resolveDefinitions(RefResolver.java:45)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.util.RefResolver.resolveDefinitions(RefResolver.java:65)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.util.RefResolver.resolveDefinitions(RefResolver.java:65)
+[33;1mregistry_1      |[0m 	at dev.sunbirdrc.registry.controller.RegistrySwaggerController.getSwaggerDoc(RegistrySwaggerController.java:55)
+[33;1mregistry_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[33;1mregistry_1      |[0m 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[33;1mregistry_1      |[0m 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[33;1mregistry_1      |[0m 	at java.lang.reflect.Method.invoke(Method.java:498)
+[33;1mregistry_1      |[0m 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+[33;1mregistry_1      |[0m 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+[33;1mregistry_1      |[0m 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+[33;1mregistry_1      |[0m 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+[33;1mregistry_1      |[0m 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter.doFilter(KeycloakAuthenticatedActionsFilter.java:57)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter.doFilter(KeycloakSecurityContextRequestFilter.java:61)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter.doFilter(KeycloakPreAuthActionsFilter.java:96)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter.successfulAuthentication(KeycloakAuthenticationProcessingFilter.java:214)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:240)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter.doFilter(KeycloakAuthenticatedActionsFilter.java:74)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter.doFilter(KeycloakSecurityContextRequestFilter.java:92)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter.successfulAuthentication(KeycloakAuthenticationProcessingFilter.java:214)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:240)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter.doFilter(KeycloakPreAuthActionsFilter.java:96)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+[33;1mregistry_1      |[0m 	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+[33;1mregistry_1      |[0m 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.tomcat.AbstractAuthenticatedActionsValve.invoke(AbstractAuthenticatedActionsValve.java:67)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+[33;1mregistry_1      |[0m 	at org.keycloak.adapters.tomcat.AbstractKeycloakAuthenticatorValve.invoke(AbstractKeycloakAuthenticatorValve.java:181)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+[33;1mregistry_1      |[0m 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+[33;1mregistry_1      |[0m 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+[33;1mregistry_1      |[0m 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+[33;1mregistry_1      |[0m 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+[33;1mregistry_1      |[0m 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+[33;1mregistry_1      |[0m 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+[33;1mregistry_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+[33;1mregistry_1      |[0m 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+[33;1mregistry_1      |[0m 	at java.lang.Thread.run(Thread.java:748)
+[33;1mregistry_1      |[0m 19:10:10.415 [http-nio-8081-exec-10] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef
+[33;1mregistry_1      |[0m 19:10:10.431 [http-nio-8081-exec-10] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:10.431 [http-nio-8081-exec-10] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:10:10.433 [http-nio-8081-exec-10] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef
+[33;1mregistry_1      |[0m 19:10:10.444 [http-nio-8081-exec-10] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:10.444 [http-nio-8081-exec-10] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:10:10.446 [http-nio-8081-exec-10] INFO  d.s.r.c.RegistryEntityController:493 - ReadEntity,1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef,dev.sunbirdrc.registry.transform.Data@12dc34c0
+[33;1mregistry_1      |[0m 19:10:10.508 [http-nio-8081-exec-5] INFO  d.s.r.c.RegistryEntityController:172 - Updating entityType Teacher request body {"contactDetails":{"name":"test name 37851914666"},"experience":[{"institute":"Some other school"}]}
+[33;1mregistry_1      |[0m 19:10:10.509 [http-nio-8081-exec-5] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef
+[33;1mregistry_1      |[0m 19:10:10.520 [http-nio-8081-exec-5] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:10.521 [http-nio-8081-exec-5] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:10:10.522 [http-nio-8081-exec-5] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef
+[33;1mregistry_1      |[0m 19:10:10.531 [http-nio-8081-exec-5] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:10.531 [http-nio-8081-exec-5] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:10:10.533 [http-nio-8081-exec-5] WARN  d.s.registry.service.ISearchService:66 - Populates SearchQuery for limit/offset(optional): null
+[33;1mregistry_1      |[0m 19:10:10.534 [http-nio-8081-exec-5] ERROR dev.sunbirdrc.pojos.RequestWrapper:39 - Can't read from http stream. Set body empty
+[33;1mregistry_1      |[0m 19:10:10.534 [http-nio-8081-exec-5] ERROR dev.sunbirdrc.pojos.APIMessage:44 - Can't read request body
+[33;1mregistry_1      |[0m 19:10:10.535 [http-nio-8081-exec-5] INFO  d.s.r.helper.EntityStateHelper:65 - Detecting state changes by comparing attestation paths in existing and the updated nodes
+[33;1mregistry_1      |[0m 19:10:10.536 [http-nio-8081-exec-5] INFO  d.s.r.helper.EntityStateHelper:130 - Updated nodes of interest: []
+[33;1mregistry_1      |[0m 19:10:10.536 [http-nio-8081-exec-5] INFO  d.s.r.helper.EntityStateHelper:130 - Updated nodes of interest: []
+[33;1mregistry_1      |[0m 19:10:10.538 [http-nio-8081-exec-5] ERROR d.s.v.j.j.JsonValidationServiceImpl:63 - Validation Exception : [#/Teacher: required key [name] not found, #/Teacher: required key [phoneNumber] not found, #/Teacher: required key [email] not found, #/Teacher: required key [subject] not found, #/Teacher: required key [school] not found]
+[33;1mregistry_1      |[0m 19:10:10.539 [http-nio-8081-exec-5] INFO  d.s.registry.sink.shard.ShardManager:43 - Activated shard shard1 for attribute value null
+[33;1mregistry_1      |[0m 19:10:10.539 [http-nio-8081-exec-5] INFO  d.s.registry.helper.RegistryHelper:356 - Update Api: shard id: 1 for uuid: fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef
+[33;1mregistry_1      |[0m 19:10:10.549 [http-nio-8081-exec-5] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:10.549 [http-nio-8081-exec-5] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:10:10.549 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:456 - Object node contactDetails={"name":"test name 37851914666","osUpdatedAt":"2022-06-30T19:10:10.540Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","osCreatedBy":"","mobile":"37851914666","email":"37851914666@example.com"}
+[33;1mregistry_1      |[0m 19:10:10.550 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:463 - Adding a new node to existing one
+[33;1mregistry_1      |[0m 19:10:10.555 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update experience
+[33;1mregistry_1      |[0m 19:10:10.563 [http-nio-8081-exec-5] ERROR d.s.registry.dao.RegistryDaoImpl:116 - Unexpected input passed here.
+[33;1mregistry_1      |[0m 19:10:10.563 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osUpdatedAt
+[33;1mregistry_1      |[0m 19:10:10.565 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osUpdatedBy
+[33;1mregistry_1      |[0m 19:10:10.565 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osOwner
+[33;1mregistry_1      |[0m 19:10:10.565 [http-nio-8081-exec-5] ERROR d.s.registry.dao.RegistryDaoImpl:116 - Unexpected input passed here.
+[33;1mregistry_1      |[0m 19:10:10.566 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osCreatedAt
+[33;1mregistry_1      |[0m 19:10:10.566 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osCreatedBy
+[33;1mregistry_1      |[0m 19:10:10.569 [IndexThread-2] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:10.569] [sunbirdrc-actors-rr-dispatcher-19] [akka://sunbirdrc-actors/user/OSActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to OSActor
+[33;1mregistry_1      |[0m 19:10:10.587 [IndexThread-2] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:10.588 [IndexThread-2] WARN  d.s.registry.service.ISearchService:66 - Populates SearchQuery for limit/offset(optional): null
+[33;1mregistry_1      |[0m 19:10:10.589 [IndexThread-2] ERROR d.s.r.service.NativeSearchService:139 - Exception while auditing org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scopedTarget.apiMessage': Scope 'request' is not active for the current thread; consider defining a scoped proxy for this bean if you intend to refer to it from a singleton; nested exception is java.lang.IllegalStateException: No thread-bound request found: Are you referring to request attributes outside of an actual web request, or processing a request outside of the originally receiving thread? If you are actually operating within a web request and still receive this message, your code is probably running outside of DispatcherServlet: In this case, use RequestContextListener or RequestContextFilter to expose the current request.
+[33;1mregistry_1      |[0m 19:10:10.590 [IndexThread-2] INFO  d.s.registry.sink.shard.ShardManager:43 - Activated shard shard1 for attribute value null
+[33;1mregistry_1      |[0m 19:10:10.591 [IndexThread-2] INFO  d.s.registry.helper.RegistryHelper:356 - Update Api: shard id: 1 for uuid: fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef
+[33;1mregistry_1      |[0m 19:10:10.612 [IndexThread-2] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:10.612 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osUpdatedAt
+[33;1mregistry_1      |[0m 19:10:10.613 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osUpdatedBy
+[33;1mregistry_1      |[0m 19:10:10.614 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update subject
+[33;1mregistry_1      |[0m 19:10:10.614 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osOwner
+[33;1mregistry_1      |[0m 19:10:10.614 [IndexThread-2] ERROR d.s.registry.dao.RegistryDaoImpl:116 - Unexpected input passed here.
+[33;1mregistry_1      |[0m 19:10:10.614 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update phoneNumber
+[33;1mregistry_1      |[0m 19:10:10.614 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osCreatedAt
+[33;1mregistry_1      |[0m 19:10:10.614 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update school
+[33;1mregistry_1      |[0m 19:10:10.614 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:456 - Object node contactDetails={"osid":"bd25c7d4-eeb7-4116-98ed-6b9cb8760ab7","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","mobile":"37851914666","osCreatedBy":"","name":"test name 37851914666","email":"37851914666@example.com"}
+[33;1mregistry_1      |[0m 19:10:10.614 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osUpdatedAt
+[33;1mregistry_1      |[0m 19:10:10.615 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osCreatedAt
+[33;1mregistry_1      |[0m 19:10:10.615 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osUpdatedBy
+[33;1mregistry_1      |[0m 19:10:10.616 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update mobile
+[33;1mregistry_1      |[0m 19:10:10.616 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osCreatedBy
+[33;1mregistry_1      |[0m 19:10:10.616 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update name
+[33;1mregistry_1      |[0m 19:10:10.616 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update email
+[33;1mregistry_1      |[0m 19:10:10.616 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:456 - Object node personalDetails={"osid":"c240d4cb-3343-4742-a6ca-ff69c8a8707d","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","dob":"2020-12-12","osCreatedBy":"","userName":"37851914666"}
+[33;1mregistry_1      |[0m 19:10:10.616 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osUpdatedAt
+[33;1mregistry_1      |[0m 19:10:10.617 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osCreatedAt
+[33;1mregistry_1      |[0m 19:10:10.617 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osUpdatedBy
+[33;1mregistry_1      |[0m 19:10:10.618 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update dob
+[33;1mregistry_1      |[0m 19:10:10.618 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osCreatedBy
+[33;1mregistry_1      |[0m 19:10:10.618 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update userName
+[33;1mregistry_1      |[0m 19:10:10.618 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update name
+[33;1mregistry_1      |[0m 19:10:10.618 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osCreatedBy
+[33;1mregistry_1      |[0m 19:10:10.618 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update experience
+[33;1mregistry_1      |[0m 19:10:10.619 [IndexThread-2] ERROR d.s.registry.dao.RegistryDaoImpl:116 - Unexpected input passed here.
+[33;1mregistry_1      |[0m 19:10:10.619 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:456 - Object node identityDetails={"osid":"cca1ed85-36be-41cf-8056-ac14e631fae0","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","osCreatedBy":"","type":"id","value":"37851914666"}
+[33;1mregistry_1      |[0m 19:10:10.619 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osUpdatedAt
+[33;1mregistry_1      |[0m 19:10:10.620 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osCreatedAt
+[33;1mregistry_1      |[0m 19:10:10.620 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osUpdatedBy
+[33;1mregistry_1      |[0m 19:10:10.620 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update osCreatedBy
+[33;1mregistry_1      |[0m 19:10:10.620 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update type
+[33;1mregistry_1      |[0m 19:10:10.621 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update value
+[33;1mregistry_1      |[0m 19:10:10.621 [IndexThread-2] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update email
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:10.623] [sunbirdrc-actors-rr-dispatcher-19] [akka://sunbirdrc-actors/user/OSActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to OSActor
+[33;1mregistry_1      |[0m 19:10:10.660 [http-nio-8081-exec-8] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef
+[33;1mregistry_1      |[0m 19:10:10.675 [http-nio-8081-exec-8] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:10.676 [http-nio-8081-exec-8] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef
+[33;1mregistry_1      |[0m 19:10:10.687 [http-nio-8081-exec-8] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:10.688 [http-nio-8081-exec-8] INFO  d.s.r.c.RegistryEntityController:493 - ReadEntity,1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef,dev.sunbirdrc.registry.transform.Data@c9a66b3
+[33;1mregistry_1      |[0m 19:10:10.785 [http-nio-8081-exec-7] INFO  d.s.r.c.RegistryEntityController:67 - Inviting entity {"identityDetails":{"fullName":"Test 37851914666","gender":"Male"},"educationDetails":[{"institute":"Some other school"}]}
+[33;1mregistry_1      |[0m 19:10:10.786 [http-nio-8081-exec-7] WARN  d.s.registry.service.ISearchService:66 - Populates SearchQuery for limit/offset(optional): null
+[33;1mregistry_1      |[0m 19:10:10.788 [http-nio-8081-exec-7] ERROR dev.sunbirdrc.pojos.RequestWrapper:39 - Can't read from http stream. Set body empty
+[33;1mregistry_1      |[0m 19:10:10.789 [http-nio-8081-exec-7] ERROR dev.sunbirdrc.pojos.APIMessage:44 - Can't read request body
+[33;1mregistry_1      |[0m 19:10:10.790 [http-nio-8081-exec-7] INFO  d.s.r.helper.EntityStateHelper:65 - Detecting state changes by comparing attestation paths in existing and the updated nodes
+[33;1mregistry_1      |[0m 19:10:10.791 [http-nio-8081-exec-7] INFO  d.s.r.helper.EntityStateHelper:130 - Updated nodes of interest: []
+[33;1mregistry_1      |[0m 19:10:10.792 [http-nio-8081-exec-7] INFO  d.s.registry.helper.RegistryHelper:223 - Add api: entity type: Student and shard propery: none
+[33;1mregistry_1      |[0m 19:10:10.793 [http-nio-8081-exec-7] INFO  d.s.registry.sink.shard.ShardManager:43 - Activated shard shard1 for attribute value null
+[33;1mregistry_1      |[0m 19:10:10.793 [http-nio-8081-exec-7] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osCreatedAt not valid!
+[33;1mregistry_1      |[0m 19:10:10.794 [http-nio-8081-exec-7] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osUpdatedAt not valid!
+[33;1mregistry_1      |[0m 19:10:10.794 [http-nio-8081-exec-7] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osCreatedBy not valid!
+[33;1mregistry_1      |[0m 19:10:10.794 [http-nio-8081-exec-7] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osUpdatedBy not valid!
+[33;1mregistry_1      |[0m 19:10:10.812 [IndexThread-1] INFO  d.s.registry.util.EntityParenter:232 - Adding index to shard: shard1 for definition: Student
+[33;1mregistry_1      |[0m 19:10:10.812 [IndexThread-1] ERROR d.s.registry.util.EntityParenter:271 - No value present
+[33;1mregistry_1      |[0m 19:10:10.813 [IndexThread-1] ERROR d.s.registry.util.EntityParenter:272 - Failed Transaction creating index Student
+[33;1mregistry_1      |[0m 19:10:10.813 [http-nio-8081-exec-7] INFO  d.s.registry.helper.RegistryHelper:229 - AddEntity,1-117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:10.814] [sunbirdrc-actors-rr-dispatcher-19] [akka://sunbirdrc-actors/user/OSActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to OSActor
+[33;1mregistry_1      |[0m 19:10:10.931 [http-nio-8081-exec-3] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m 19:10:10.944 [http-nio-8081-exec-3] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:10.945 [http-nio-8081-exec-3] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m 19:10:10.952 [http-nio-8081-exec-3] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:10.953 [http-nio-8081-exec-3] INFO  d.s.r.c.RegistryEntityController:493 - ReadEntity,1-117f25fe-d43e-4821-9756-8da1aab4ed4b,dev.sunbirdrc.registry.transform.Data@40a6b075
+[33;1mregistry_1      |[0m 19:10:11.049 [http-nio-8081-exec-10] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m 19:10:11.062 [http-nio-8081-exec-10] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:11.063 [http-nio-8081-exec-10] WARN  d.s.registry.service.ISearchService:66 - Populates SearchQuery for limit/offset(optional): null
+[33;1mregistry_1      |[0m 19:10:11.065 [http-nio-8081-exec-10] ERROR dev.sunbirdrc.pojos.RequestWrapper:39 - Can't read from http stream. Set body empty
+[33;1mregistry_1      |[0m 19:10:11.066 [http-nio-8081-exec-10] ERROR dev.sunbirdrc.pojos.APIMessage:44 - Can't read request body
+[33;1mregistry_1      |[0m 19:10:11.067 [http-nio-8081-exec-10] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m 19:10:11.078 [http-nio-8081-exec-10] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:11.082 [http-nio-8081-exec-10] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m 19:10:11.095 [http-nio-8081-exec-10] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:11.097 [http-nio-8081-exec-10] WARN  d.s.registry.service.ISearchService:66 - Populates SearchQuery for limit/offset(optional): null
+[33;1mregistry_1      |[0m 19:10:11.099 [http-nio-8081-exec-10] INFO  d.s.r.helper.EntityStateHelper:65 - Detecting state changes by comparing attestation paths in existing and the updated nodes
+[33;1mregistry_1      |[0m 19:10:11.100 [http-nio-8081-exec-10] INFO  d.s.r.helper.EntityStateHelper:130 - Updated nodes of interest: [dev.sunbirdrc.registry.model.attestation.EntityPropertyURI@65b012e2]
+[33;1mregistry_1      |[0m 19:10:11.101 [http-nio-8081-exec-10] INFO  dev.sunbirdrc.workflow.StateContext:52 - setting metadata _osState : "DRAFT"
+[33;1mregistry_1      |[0m 19:10:11.103 [http-nio-8081-exec-10] INFO  d.s.registry.sink.shard.ShardManager:43 - Activated shard shard1 for attribute value null
+[33;1mregistry_1      |[0m 19:10:11.104 [http-nio-8081-exec-10] INFO  d.s.registry.helper.RegistryHelper:356 - Update Api: shard id: 1 for uuid: 117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m 19:10:11.104 [http-nio-8081-exec-10] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osCreatedAt not valid!
+[33;1mregistry_1      |[0m 19:10:11.105 [http-nio-8081-exec-10] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osUpdatedAt not valid!
+[33;1mregistry_1      |[0m 19:10:11.106 [http-nio-8081-exec-10] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osCreatedBy not valid!
+[33;1mregistry_1      |[0m 19:10:11.106 [http-nio-8081-exec-10] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osUpdatedBy not valid!
+[33;1mregistry_1      |[0m 19:10:11.120 [http-nio-8081-exec-10] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:11.120 [http-nio-8081-exec-10] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update educationDetails
+[33;1mregistry_1      |[0m 19:10:11.121 [http-nio-8081-exec-10] ERROR d.s.registry.dao.RegistryDaoImpl:116 - Unexpected input passed here.
+[33;1mregistry_1      |[0m 19:10:11.122 [http-nio-8081-exec-10] INFO  d.s.r.s.impl.RegistryServiceImpl:456 - Object node identityDetails={"osid":"47b5ca6f-40f7-483e-bedf-4402b98680da","gender":"Male","fullName":"Test 37851914666"}
+[33;1mregistry_1      |[0m 19:10:11.122 [http-nio-8081-exec-10] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update gender
+[33;1mregistry_1      |[0m 19:10:11.123 [http-nio-8081-exec-10] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update fullName
+[33;1mregistry_1      |[0m 19:10:11.123 [http-nio-8081-exec-10] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update studentInstituteAttest
+[33;1mregistry_1      |[0m 19:10:11.135 [http-nio-8081-exec-10] ERROR d.s.registry.dao.RegistryDaoImpl:116 - Unexpected input passed here.
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:11.137] [sunbirdrc-actors-rr-dispatcher-19] [akka://sunbirdrc-actors/user/OSActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to OSActor
+[33;1mregistry_1      |[0m 19:10:11.137 [http-nio-8081-exec-10] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m 19:10:11.152 [http-nio-8081-exec-10] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:11.152 [http-nio-8081-exec-10] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:10:11.153 [http-nio-8081-exec-10] INFO  d.s.r.m.s.ConditionResolverService:32 - Gonna resolve for the json {"name":"Test 37851914666","educationDetails":[{"institute":"Some other school","osid":"1-38fc71cb-2114-4e1b-b79c-bbd3f15ba612"}]}
+[33;1mregistry_1      |[0m 19:10:11.153 [http-nio-8081-exec-10] INFO  d.s.r.m.s.ConditionResolverService:84 - Condition after replacing the entries (ATTESTOR#$.experience.[*].instituteOSID#.contains(REQUESTER#$.educationDetails.*.instituteOSID#))
+[33;1mregistry_1      |[0m 19:10:11.154 [http-nio-8081-exec-10] INFO  d.s.r.m.s.ConditionResolverService:89 - Processing pairs condition (ATTESTOR#$.experience.[*].instituteOSID#.contains(REQUESTER#$.educationDetails.*.instituteOSID#)) -> pairs REQUESTER#$.educationDetails.*.instituteOSID#, {}
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:11.156] [sunbirdrc-actors-rr-dispatcher-19] [akka://sunbirdrc-actors/user/ClaimPluginActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to ClaimPluginActor
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.159 DEBUG 1 --- [o-8082-Acceptor] o.apache.tomcat.util.threads.LimitLatch  : Counting up[http-nio-8082-Acceptor] latch=1
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.159 DEBUG 1 --- [nio-8082-exec-7] o.a.coyote.http11.Http11InputBuffer      : Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [313]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.159 DEBUG 1 --- [nio-8082-exec-7] o.a.tomcat.util.net.SocketWrapperBase    : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@4cac6a4c:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56318]], Read from buffer: [0]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.160 DEBUG 1 --- [nio-8082-exec-7] org.apache.tomcat.util.net.NioEndpoint   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@4cac6a4c:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56318]], Read direct from socket: [746]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.160 DEBUG 1 --- [nio-8082-exec-7] o.a.coyote.http11.Http11InputBuffer      : Received [POST /api/v1/claims HTTP/1.1
+[36mclaim-ms_1      |[0m Accept: application/json, application/x-jackson-smile, application/cbor, application/*+json
+[36mclaim-ms_1      |[0m Content-Type: application/json
+[36mclaim-ms_1      |[0m User-Agent: Java/1.8.0_202
+[36mclaim-ms_1      |[0m Host: claim-ms:8082
+[36mclaim-ms_1      |[0m Connection: keep-alive
+[36mclaim-ms_1      |[0m Content-Length: 495
+[36mclaim-ms_1      |[0m 
+[36mclaim-ms_1      |[0m {"entity":"Student","entityId":"1-117f25fe-d43e-4821-9756-8da1aab4ed4b","propertyURI":"","notes":"","status":null,"conditions":"(ATTESTOR#$.experience.[*].instituteOSID#.contains({}))","attestorEntity":"Teacher","requestorName":null,"propertyData":"{\"name\":\"Test 37851914666\",\"educationDetails\":[{\"institute\":\"Some other school\",\"osid\":\"1-38fc71cb-2114-4e1b-b79c-bbd3f15ba612\"}]}","attestationId":"1-0c0c814e-61f2-4355-bbe4-b96aa6b9ebd2","attestationName":"studentInstituteAttest"}]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.160 DEBUG 1 --- [nio-8082-exec-7] o.a.c.authenticator.AuthenticatorBase    : Security checking request POST /api/v1/claims
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.160 DEBUG 1 --- [nio-8082-exec-7] org.apache.catalina.realm.RealmBase      :   No applicable constraints defined
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.160 DEBUG 1 --- [nio-8082-exec-7] o.a.c.authenticator.AuthenticatorBase    : Not subject to any constraint
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.160 DEBUG 1 --- [nio-8082-exec-7] org.apache.tomcat.util.http.Parameters   : Set encoding to UTF-8
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.161 DEBUG 1 --- [nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/claims", parameters={}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.161 DEBUG 1 --- [nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to dev.sunbirdrc.claim.controller.ClaimsController#save(ClaimDTO)
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.161 DEBUG 1 --- [nio-8082-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.162 DEBUG 1 --- [nio-8082-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [dev.sunbirdrc.pojos.dto.ClaimDTO@426b9da9]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.162  INFO 1 --- [nio-8082-exec-7] d.s.claim.controller.ClaimsController    : Adding new claimDTO dev.sunbirdrc.pojos.dto.ClaimDTO@426b9da9 
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.162 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1179910460<open>)] for JPA transaction
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.162 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.162 DEBUG 1 --- [nio-8082-exec-7] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.162 DEBUG 1 --- [nio-8082-exec-7] o.h.e.t.internal.TransactionImpl         : begin
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.163 DEBUG 1 --- [nio-8082-exec-7] org.postgresql.jdbc.PgConnection         :   setAutoCommit = false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.163 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@2c8773be]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.163 DEBUG 1 --- [nio-8082-exec-7] o.h.e.i.AbstractSaveEventListener        : Generated identifier: 8c827ae5-452b-4326-a093-c1c2a092e433, using strategy: org.hibernate.id.UUIDGenerator
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.163 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.163 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1179910460<open>)]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.163 DEBUG 1 --- [nio-8082-exec-7] o.h.e.t.internal.TransactionImpl         : committing
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.163 DEBUG 1 --- [nio-8082-exec-7] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.164 DEBUG 1 --- [nio-8082-exec-7] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.164 DEBUG 1 --- [nio-8082-exec-7] o.h.e.i.AbstractFlushingEventListener    : Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.164 DEBUG 1 --- [nio-8082-exec-7] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.164 DEBUG 1 --- [nio-8082-exec-7] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.164 DEBUG 1 --- [nio-8082-exec-7] o.hibernate.internal.util.EntityPrinter  : dev.sunbirdrc.claim.entity.Claim{attestedOn=null, attestationId=1-0c0c814e-61f2-4355-bbe4-b96aa6b9ebd2, attestationName=studentInstituteAttest, attestorEntity=Teacher, entityId=1-117f25fe-d43e-4821-9756-8da1aab4ed4b, propertyData={"name":"Test 37851914666","educationDetails":[{"institute":"Some other school","osid":"1-38fc71cb-2114-4e1b-b79c-bbd3f15ba612"}]}, createdAt=Thu Jun 30 19:10:11 GMT 2022, id=8c827ae5-452b-4326-a093-c1c2a092e433, conditions=(ATTESTOR#$.experience.[*].instituteOSID#.contains(dev.sunbirdrc.claim.entity.Claim{attestedOn=null, attestationId=1-0c0c814e-61f2-4355-bbe4-b96aa6b9ebd2, attestationName=studentInstituteAttest, attestorEntity=Teacher, entityId=1-117f25fe-d43e-4821-9756-8da1aab4ed4b, propertyData={"name":"Test 37851914666","educationDetails":[{"institute":"Some other school","osid":"1-38fc71cb-2114-4e1b-b79c-bbd3f15ba612"}]}, createdAt=Thu Jun 30 19:10:11 GMT 2022, id=8c827ae5-452b-4326-a093-c1c2a092e433, conditions=(ATTESTOR#$.experience.[*].instituteOSID#.contains({})), propertyURI=, requestorName=null, entity=Student, status=OPEN})), propertyURI=, requestorName=null, entity=Student, status=OPEN}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.164 DEBUG 1 --- [nio-8082-exec-7] org.hibernate.SQL                        : insert into claims (attestation_id, attestation_name, attested_on, attestor_entity, conditions, created_at, entity, entity_id, property_data, propertyuri, requestor_name, status, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.165 DEBUG 1 --- [nio-8082-exec-7] org.postgresql.jdbc.PgConnection         :   setAutoCommit = true
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.166 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.166 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1179910460<open>)] for JPA transaction
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.166 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.166 DEBUG 1 --- [nio-8082-exec-7] o.h.e.t.internal.TransactionImpl         : begin
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.166 DEBUG 1 --- [nio-8082-exec-7] org.postgresql.jdbc.PgConnection         :   setAutoCommit = false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.166 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@74f4fd8f]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.166 DEBUG 1 --- [nio-8082-exec-7] o.h.e.i.AbstractSaveEventListener        : Generated identifier: 3b5ae020-6b3d-42c4-874e-5a7bfea343c3, using strategy: org.hibernate.id.UUIDGenerator
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.167 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.167 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1179910460<open>)]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.167 DEBUG 1 --- [nio-8082-exec-7] o.h.e.t.internal.TransactionImpl         : committing
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.167 DEBUG 1 --- [nio-8082-exec-7] o.h.e.i.AbstractFlushingEventListener    : Processing flush-time cascades
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.167 DEBUG 1 --- [nio-8082-exec-7] o.h.e.i.AbstractFlushingEventListener    : Dirty checking collections
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.167 DEBUG 1 --- [nio-8082-exec-7] o.h.e.i.AbstractFlushingEventListener    : Flushed: 1 insertions, 0 updates, 0 deletions to 2 objects
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.167 DEBUG 1 --- [nio-8082-exec-7] o.h.e.i.AbstractFlushingEventListener    : Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.167 DEBUG 1 --- [nio-8082-exec-7] o.hibernate.internal.util.EntityPrinter  : Listing entities:
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.167 DEBUG 1 --- [nio-8082-exec-7] o.hibernate.internal.util.EntityPrinter  : dev.sunbirdrc.claim.entity.ClaimNote{createdAt=Thu Jun 30 19:10:11 GMT 2022, notes=, addedBy=null, entityId=1-117f25fe-d43e-4821-9756-8da1aab4ed4b, id=3b5ae020-6b3d-42c4-874e-5a7bfea343c3, propertyURI=}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.167 DEBUG 1 --- [nio-8082-exec-7] o.hibernate.internal.util.EntityPrinter  : dev.sunbirdrc.claim.entity.Claim{attestedOn=null, attestationId=1-0c0c814e-61f2-4355-bbe4-b96aa6b9ebd2, attestationName=studentInstituteAttest, attestorEntity=Teacher, entityId=1-117f25fe-d43e-4821-9756-8da1aab4ed4b, propertyData={"name":"Test 37851914666","educationDetails":[{"institute":"Some other school","osid":"1-38fc71cb-2114-4e1b-b79c-bbd3f15ba612"}]}, createdAt=Thu Jun 30 19:10:11 GMT 2022, id=8c827ae5-452b-4326-a093-c1c2a092e433, conditions=(ATTESTOR#$.experience.[*].instituteOSID#.contains(dev.sunbirdrc.claim.entity.Claim{attestedOn=null, attestationId=1-0c0c814e-61f2-4355-bbe4-b96aa6b9ebd2, attestationName=studentInstituteAttest, attestorEntity=Teacher, entityId=1-117f25fe-d43e-4821-9756-8da1aab4ed4b, propertyData={"name":"Test 37851914666","educationDetails":[{"institute":"Some other school","osid":"1-38fc71cb-2114-4e1b-b79c-bbd3f15ba612"}]}, createdAt=Thu Jun 30 19:10:11 GMT 2022, id=8c827ae5-452b-4326-a093-c1c2a092e433, conditions=(ATTESTOR#$.experience.[*].instituteOSID#.contains({})), propertyURI=, requestorName=null, entity=Student, status=OPEN})), propertyURI=, requestorName=null, entity=Student, status=OPEN}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.168 DEBUG 1 --- [nio-8082-exec-7] org.hibernate.SQL                        : insert into claim_notes (added_by, created_at, entity_id, notes, propertyuri, id) values (?, ?, ?, ?, ?, ?)
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.169 DEBUG 1 --- [nio-8082-exec-7] org.postgresql.jdbc.PgConnection         :   setAutoCommit = true
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.169 DEBUG 1 --- [nio-8082-exec-7] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.170 DEBUG 1 --- [nio-8082-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, application/x-jackson-smile, application/cbor, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.170 DEBUG 1 --- [nio-8082-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Claim{entity='Student', entityId='1-117f25fe-d43e-4821-9756-8da1aab4ed4b', propertyURI='', status='O (truncated)...]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.171 DEBUG 1 --- [nio-8082-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.171 DEBUG 1 --- [nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.172 DEBUG 1 --- [nio-8082-exec-7] o.a.coyote.http11.Http11InputBuffer      : Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [251]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.172 DEBUG 1 --- [nio-8082-exec-7] o.a.tomcat.util.net.SocketWrapperBase    : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@4cac6a4c:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56318]], Read from buffer: [0]
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:11.171] [sunbirdrc-actors-rr-dispatcher-19] [akka://sunbirdrc-actors/user/ClaimPluginActor/$a] Claim has successfully risen {"id":"8c827ae5-452b-4326-a093-c1c2a092e433","entity":"Student","entityId":"1-117f25fe-d43e-4821-9756-8da1aab4ed4b","propertyURI":"","createdAt":"2022-06-30T19:10:11.163+00:00","attestedOn":null,"status":"OPEN","conditions":"(ATTESTOR#$.experience.[*].instituteOSID#.contains({}))","attestorEntity":"Teacher","requestorName":null,"propertyData":"{\"name\":\"Test 37851914666\",\"educationDetails\":[{\"institute\":\"Some other school\",\"osid\":\"1-38fc71cb-2114-4e1b-b79c-bbd3f15ba612\"}]}","attestationId":"1-0c0c814e-61f2-4355-bbe4-b96aa6b9ebd2","attestationName":"studentInstituteAttest","closed":false}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.172 DEBUG 1 --- [nio-8082-exec-7] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+[36mclaim-ms_1      |[0m 
+[36mclaim-ms_1      |[0m java.io.EOFException: null
+[36mclaim-ms_1      |[0m 	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1345) ~[tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1255) ~[tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:799) ~[tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:359) ~[tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:261) ~[tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) [tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_212]
+[36mclaim-ms_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_212]
+[36mclaim-ms_1      |[0m 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_212]
+[36mclaim-ms_1      |[0m 
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.173 DEBUG 1 --- [nio-8082-exec-7] o.apache.coyote.http11.Http11Processor   : Error state [CLOSE_CONNECTION_NOW] reported while processing request
+[36mclaim-ms_1      |[0m 
+[36mclaim-ms_1      |[0m java.io.EOFException: null
+[36mclaim-ms_1      |[0m 	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1345) ~[tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1255) ~[tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.coyote.http11.Http11InputBuffer.fill(Http11InputBuffer.java:799) ~[tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:359) ~[tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:261) ~[tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) [tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_212]
+[36mclaim-ms_1      |[0m 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_212]
+[36mclaim-ms_1      |[0m 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.46.jar!/:na]
+[36mclaim-ms_1      |[0m 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_212]
+[36mclaim-ms_1      |[0m 
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.173 DEBUG 1 --- [nio-8082-exec-7] o.apache.coyote.http11.Http11Processor   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@4cac6a4c:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56318]], Status in: [OPEN_READ], State out: [CLOSED]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.173 DEBUG 1 --- [nio-8082-exec-7] o.apache.tomcat.util.threads.LimitLatch  : Counting down[http-nio-8082-exec-7] latch=1
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.173 DEBUG 1 --- [nio-8082-exec-7] org.apache.tomcat.util.net.NioEndpoint   : Calling [org.apache.tomcat.util.net.NioEndpoint@2f0620cb].closeSocket([org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@4cac6a4c:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56318]])
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:11.174] [sunbirdrc-actors-rr-dispatcher-19] [akka://sunbirdrc-actors/user/PluginResponseActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to PluginResponseActor
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:11.174] [sunbirdrc-actors-rr-dispatcher-19] [akka://sunbirdrc-actors/user/PluginResponseActor/$a] PluginResponseMessage(policyName=studentInstituteAttest, sourceEntity=Student, sourceOSID=1-117f25fe-d43e-4821-9756-8da1aab4ed4b, attestationOSID=1-0c0c814e-61f2-4355-bbe4-b96aa6b9ebd2, attestorPlugin=did:internal:ClaimPluginActor?entity=Teacher, response=null, signedData=null, additionalData={"claimId":"8c827ae5-452b-4326-a093-c1c2a092e433"}, status=RAISE_CLAIM, date=Thu Jun 30 19:10:11 GMT 2022, validUntil=Thu Jun 30 19:10:11 GMT 2022, version=, files=[])
+[33;1mregistry_1      |[0m 19:10:11.185 [http-nio-8081-exec-5] INFO  d.s.r.c.RegistryEntityController:600 - Got system request to update attestation property Student 1-117f25fe-d43e-4821-9756-8da1aab4ed4b studentInstituteAttest 1-0c0c814e-61f2-4355-bbe4-b96aa6b9ebd2
+[33;1mregistry_1      |[0m 19:10:11.186 [http-nio-8081-exec-5] INFO  d.s.r.c.RegistryEntityController:607 - updateAttestationProperty: {"policyName":"studentInstituteAttest","sourceEntity":"Student","sourceOSID":"1-117f25fe-d43e-4821-9756-8da1aab4ed4b","attestationOSID":"1-0c0c814e-61f2-4355-bbe4-b96aa6b9ebd2","attestorPlugin":"did:internal:ClaimPluginActor?entity=Teacher","response":null,"signedData":null,"additionalData":{"claimId":"8c827ae5-452b-4326-a093-c1c2a092e433"},"status":"RAISE_CLAIM","date":1656616211171,"validUntil":1656616211171,"version":"","files":[],"osid":"1-117f25fe-d43e-4821-9756-8da1aab4ed4b"}
+[33;1mregistry_1      |[0m 19:10:11.186 [http-nio-8081-exec-5] WARN  d.s.registry.service.ISearchService:66 - Populates SearchQuery for limit/offset(optional): null
+[33;1mregistry_1      |[0m 19:10:11.188 [http-nio-8081-exec-5] ERROR dev.sunbirdrc.pojos.RequestWrapper:39 - Can't read from http stream. Set body empty
+[33;1mregistry_1      |[0m 19:10:11.189 [http-nio-8081-exec-5] ERROR dev.sunbirdrc.pojos.APIMessage:44 - Can't read request body
+[33;1mregistry_1      |[0m 19:10:11.190 [http-nio-8081-exec-5] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m 19:10:11.207 [http-nio-8081-exec-6] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m 19:10:11.209 [http-nio-8081-exec-5] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:11.210 [http-nio-8081-exec-5] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:10:11.212 [http-nio-8081-exec-5] INFO  dev.sunbirdrc.workflow.StateContext:52 - setting metadata _osState : "ATTESTATION_REQUESTED"
+[33;1mregistry_1      |[0m 19:10:11.213 [http-nio-8081-exec-5] INFO  dev.sunbirdrc.workflow.StateContext:52 - setting metadata _osClaimId : "8c827ae5-452b-4326-a093-c1c2a092e433"
+[33;1mregistry_1      |[0m 19:10:11.214 [http-nio-8081-exec-5] INFO  d.s.registry.sink.shard.ShardManager:43 - Activated shard shard1 for attribute value null
+[33;1mregistry_1      |[0m 19:10:11.215 [http-nio-8081-exec-5] INFO  d.s.registry.helper.RegistryHelper:356 - Update Api: shard id: 1 for uuid: 117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m 19:10:11.215 [http-nio-8081-exec-5] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osCreatedAt not valid!
+[33;1mregistry_1      |[0m 19:10:11.216 [http-nio-8081-exec-5] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osUpdatedAt not valid!
+[33;1mregistry_1      |[0m 19:10:11.216 [http-nio-8081-exec-5] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osCreatedBy not valid!
+[33;1mregistry_1      |[0m 19:10:11.216 [http-nio-8081-exec-5] ERROR d.s.r.util.OSSystemFieldsHelper:83 - Audit field - _osUpdatedBy not valid!
+[33;1mregistry_1      |[0m 19:10:11.227 [http-nio-8081-exec-6] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:11.228 [http-nio-8081-exec-6] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:10:11.229 [http-nio-8081-exec-6] INFO  d.s.registry.helper.RegistryHelper:261 - Read Api: shard id: 1 for label: 1-117f25fe-d43e-4821-9756-8da1aab4ed4b
+[33;1mregistry_1      |[0m 19:10:11.240 [http-nio-8081-exec-5] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:11.240 [http-nio-8081-exec-5] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:10:11.241 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update educationDetails
+[33;1mregistry_1      |[0m 19:10:11.241 [http-nio-8081-exec-5] ERROR d.s.registry.dao.RegistryDaoImpl:116 - Unexpected input passed here.
+[33;1mregistry_1      |[0m 19:10:11.242 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update studentInstituteAttest
+[33;1mregistry_1      |[0m 19:10:11.243 [http-nio-8081-exec-5] ERROR d.s.registry.dao.RegistryDaoImpl:116 - Unexpected input passed here.
+[33;1mregistry_1      |[0m 19:10:11.244 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:456 - Object node identityDetails={"osid":"47b5ca6f-40f7-483e-bedf-4402b98680da","gender":"Male","fullName":"Test 37851914666"}
+[33;1mregistry_1      |[0m 19:10:11.244 [http-nio-8081-exec-6] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:11.245 [http-nio-8081-exec-6] WARN  d.s.registry.dao.VertexReader:377 - Maximum expand level reached
+[33;1mregistry_1      |[0m 19:10:11.245 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update gender
+[33;1mregistry_1      |[0m 19:10:11.245 [http-nio-8081-exec-5] INFO  d.s.r.s.impl.RegistryServiceImpl:430 - Value or array node, going to update fullName
+[33;1mregistry_1      |[0m 19:10:11.246 [http-nio-8081-exec-6] INFO  d.s.r.c.RegistryEntityController:493 - ReadEntity,1-117f25fe-d43e-4821-9756-8da1aab4ed4b,dev.sunbirdrc.registry.transform.Data@6bb2f71b
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:11.248] [sunbirdrc-actors-rr-dispatcher-20] [akka://sunbirdrc-actors/user/OSActor/$a] SEND message from akka://sunbirdrc-actors/user/SBRouter to OSActor
+[33;1mregistry_1      |[0m [INFO] [06/30/2022 19:10:11.252] [sunbirdrc-actors-rr-dispatcher-19] [akka://sunbirdrc-actors/user/PluginResponseActor/$a] Update status api call's status 200 OK
+[33;1mregistry_1      |[0m 19:10:11.393 [http-nio-8081-exec-9] WARN  d.s.registry.service.ISearchService:66 - Populates SearchQuery for limit/offset(optional): null
+[33;1mregistry_1      |[0m 19:10:11.409 [http-nio-8081-exec-9] INFO  d.s.registry.dao.VertexReader:496 - Finished loading information. Start creating the response
+[33;1mregistry_1      |[0m 19:10:11.411 [http-nio-8081-exec-9] ERROR dev.sunbirdrc.pojos.APIMessage:44 - Can't read request body
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.414 DEBUG 1 --- [o-8082-Acceptor] o.apache.tomcat.util.threads.LimitLatch  : Counting up[http-nio-8082-Acceptor] latch=1
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.415 DEBUG 1 --- [nio-8082-exec-8] o.a.coyote.http11.Http11InputBuffer      : Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [251]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.415 DEBUG 1 --- [nio-8082-exec-8] o.a.tomcat.util.net.SocketWrapperBase    : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@531e4739:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56320]], Read from buffer: [0]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.416 DEBUG 1 --- [nio-8082-exec-8] org.apache.tomcat.util.net.NioEndpoint   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@531e4739:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56320]], Read direct from socket: [1730]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.416 DEBUG 1 --- [nio-8082-exec-8] o.a.coyote.http11.Http11InputBuffer      : Received [POST /api/v1/getClaims HTTP/1.1
+[36mclaim-ms_1      |[0m Accept: application/json, application/x-jackson-smile, application/cbor, application/*+json
+[36mclaim-ms_1      |[0m Content-Type: application/json
+[36mclaim-ms_1      |[0m Content-Length: 1417
+[36mclaim-ms_1      |[0m Host: claim-ms:8082
+[36mclaim-ms_1      |[0m Connection: Keep-Alive
+[36mclaim-ms_1      |[0m User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_202)
+[36mclaim-ms_1      |[0m Accept-Encoding: gzip,deflate
+[36mclaim-ms_1      |[0m 
+[36mclaim-ms_1      |[0m {"attestorInfo":{"osUpdatedAt":"2022-06-30T19:10:10.591Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","subject":"Electrical Kernel","osid":"1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef","osOwner":["d638006b-bfa4-411a-84eb-c1dc176101ee"],"phoneNumber":"72390","osCreatedAt":"2022-06-30T19:10:10.047Z","school":"NIT Surat","contactDetails":{"osid":"1-bd25c7d4-eeb7-4116-98ed-6b9cb8760ab7","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","mobile":"37851914666","osCreatedBy":"","name":"test name 37851914666","email":"37851914666@example.com"},"personalDetails":{"osid":"1-c240d4cb-3343-4742-a6ca-ff69c8a8707d","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","dob":"2020-12-12","osCreatedBy":"","userName":"37851914666"},"name":"Harshil","osCreatedBy":"","experience":[{"osUpdatedAt":"2022-06-30T19:10:10.591Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","institute":"Some other school","osid":"1-62da9fc1-e172-457b-b150-34e5814fe741"}],"identityDetails":{"osid":"1-cca1ed85-36be-41cf-8056-ac14e631fae0","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","osCreatedBy":"","type":"id","value":"37851914666"},"email":"haj@1234.com"},"entity":"Teacher"}]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.416 DEBUG 1 --- [nio-8082-exec-8] o.a.c.authenticator.AuthenticatorBase    : Security checking request POST /api/v1/getClaims
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.416 DEBUG 1 --- [nio-8082-exec-8] org.apache.catalina.realm.RealmBase      :   No applicable constraints defined
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.416 DEBUG 1 --- [nio-8082-exec-8] o.a.c.authenticator.AuthenticatorBase    : Not subject to any constraint
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.417 DEBUG 1 --- [nio-8082-exec-8] org.apache.tomcat.util.http.Parameters   : Set encoding to UTF-8
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.417 DEBUG 1 --- [nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/getClaims", parameters={}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.417 DEBUG 1 --- [nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to dev.sunbirdrc.claim.controller.ClaimsController#getClaims(HttpHeaders, JsonNode)
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.417 DEBUG 1 --- [nio-8082-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.419 DEBUG 1 --- [nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{"attestorInfo":{"osUpdatedAt":"2022-06-30T19:10:10.591Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1d (truncated)...]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.419 DEBUG 1 --- [nio-8082-exec-8] o.h.q.c.internal.CriteriaQueryImpl       : Rendered criteria query -> select generatedAlias0 from Claim as generatedAlias0 where generatedAlias0.attestorEntity=:param0
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.419 DEBUG 1 --- [nio-8082-exec-8] org.hibernate.SQL                        : select claim0_.id as id1_1_, claim0_.attestation_id as attestat2_1_, claim0_.attestation_name as attestat3_1_, claim0_.attested_on as attested4_1_, claim0_.attestor_entity as attestor5_1_, claim0_.conditions as conditio6_1_, claim0_.created_at as created_7_1_, claim0_.entity as entity8_1_, claim0_.entity_id as entity_i9_1_, claim0_.property_data as propert10_1_, claim0_.propertyuri as propert11_1_, claim0_.requestor_name as request12_1_, claim0_.status as status13_1_ from claims claim0_ where claim0_.attestor_entity=?
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.420 DEBUG 1 --- [nio-8082-exec-8] org.hibernate.loader.Loader              : Result set row: 0
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.420 DEBUG 1 --- [nio-8082-exec-8] org.hibernate.loader.Loader              : Result row: EntityKey[dev.sunbirdrc.claim.entity.Claim#ae255390-fa7e-4c14-bbe1-424b551b8f56]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.421 DEBUG 1 --- [nio-8082-exec-8] org.hibernate.loader.Loader              : Result set row: 1
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.421 DEBUG 1 --- [nio-8082-exec-8] org.hibernate.loader.Loader              : Result row: EntityKey[dev.sunbirdrc.claim.entity.Claim#baa892c5-0cd8-4beb-823f-2ba2571bdebf]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.421 DEBUG 1 --- [nio-8082-exec-8] org.hibernate.loader.Loader              : Result set row: 2
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.421 DEBUG 1 --- [nio-8082-exec-8] org.hibernate.loader.Loader              : Result row: EntityKey[dev.sunbirdrc.claim.entity.Claim#8c827ae5-452b-4326-a093-c1c2a092e433]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.421 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Resolving attributes for [dev.sunbirdrc.claim.entity.Claim#ae255390-fa7e-4c14-bbe1-424b551b8f56]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestationId` : value = 1-bf6535b4-6866-4373-ad62-84ea4375d72d
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestationId`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestationName` : value = studentInstituteAttest
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestationName`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestedOn` : value = null
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestedOn`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestorEntity` : value = Teacher
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestorEntity`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `conditions` : value = (ATTESTOR#$.experience.[*].instituteOSID#.contains(conditions))
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`conditions`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `createdAt` : value = 2022-06-30 19:04:50.153
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`createdAt`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `entity` : value = Student
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`entity`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `entityId` : value = 1-12b67a3f-3c88-43e1-98bf-f55891889c5b
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`entityId`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `propertyData` : value = {"name":"Test 21997307359","educationDetails":[{"institute":"Some other school","osid":"1-db0685e5-bd97-4db8-ae62-187dde329eec"}]}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`propertyData`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `propertyURI` : value = 
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`propertyURI`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `requestorName` : value = null
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`requestorName`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `status` : value = OPEN
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`status`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Done materializing entity [dev.sunbirdrc.claim.entity.Claim#ae255390-fa7e-4c14-bbe1-424b551b8f56]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Resolving attributes for [dev.sunbirdrc.claim.entity.Claim#baa892c5-0cd8-4beb-823f-2ba2571bdebf]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestationId` : value = 1-f81b65bd-a539-4aa9-bd70-a237633dff81
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestationId`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestationName` : value = studentInstituteAttest
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestationName`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestedOn` : value = null
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestedOn`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestorEntity` : value = Teacher
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.422 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestorEntity`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `conditions` : value = (ATTESTOR#$.experience.[*].instituteOSID#.contains(conditions))
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`conditions`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `createdAt` : value = 2022-06-30 19:09:02.402
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`createdAt`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `entity` : value = Student
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`entity`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `entityId` : value = 1-d75cce12-d454-4236-bf4e-2292c8a0c93a
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`entityId`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `propertyData` : value = {"name":"Test 15211627537","educationDetails":[{"institute":"Some other school","osid":"1-7e0b377f-5c0c-448b-965a-88abf742b6dd"}]}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`propertyData`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `propertyURI` : value = 
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`propertyURI`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `requestorName` : value = null
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.423 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`requestorName`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.424 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `status` : value = OPEN
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.424 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`status`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.424 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Done materializing entity [dev.sunbirdrc.claim.entity.Claim#baa892c5-0cd8-4beb-823f-2ba2571bdebf]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.424 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Resolving attributes for [dev.sunbirdrc.claim.entity.Claim#8c827ae5-452b-4326-a093-c1c2a092e433]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.424 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestationId` : value = 1-0c0c814e-61f2-4355-bbe4-b96aa6b9ebd2
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.424 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestationId`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.424 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestationName` : value = studentInstituteAttest
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.424 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestationName`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.424 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestedOn` : value = null
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestedOn`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `attestorEntity` : value = Teacher
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`attestorEntity`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `conditions` : value = (ATTESTOR#$.experience.[*].instituteOSID#.contains(conditions))
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`conditions`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `createdAt` : value = 2022-06-30 19:10:11.163
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`createdAt`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `entity` : value = Student
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`entity`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `entityId` : value = 1-117f25fe-d43e-4821-9756-8da1aab4ed4b
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`entityId`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `propertyData` : value = {"name":"Test 37851914666","educationDetails":[{"institute":"Some other school","osid":"1-38fc71cb-2114-4e1b-b79c-bbd3f15ba612"}]}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`propertyData`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `propertyURI` : value = 
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`propertyURI`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `requestorName` : value = null
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`requestorName`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Processing attribute `status` : value = OPEN
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Attribute (`status`)  - enhanced for lazy-loading? - false
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.425 DEBUG 1 --- [nio-8082-exec-8] o.h.engine.internal.TwoPhaseLoad         : Done materializing entity [dev.sunbirdrc.claim.entity.Claim#8c827ae5-452b-4326-a093-c1c2a092e433]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.426  INFO 1 --- [nio-8082-exec-8] d.sunbirdrc.claim.service.ClaimService   : Found 3 claims to process
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.426  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Gonna resolve for the json {"osUpdatedAt":"2022-06-30T19:10:10.591Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","subject":"Electrical Kernel","osid":"1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef","osOwner":["d638006b-bfa4-411a-84eb-c1dc176101ee"],"phoneNumber":"72390","osCreatedAt":"2022-06-30T19:10:10.047Z","school":"NIT Surat","contactDetails":{"osid":"1-bd25c7d4-eeb7-4116-98ed-6b9cb8760ab7","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","mobile":"37851914666","osCreatedBy":"","name":"test name 37851914666","email":"37851914666@example.com"},"personalDetails":{"osid":"1-c240d4cb-3343-4742-a6ca-ff69c8a8707d","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","dob":"2020-12-12","osCreatedBy":"","userName":"37851914666"},"name":"Harshil","osCreatedBy":"","experience":[{"osUpdatedAt":"2022-06-30T19:10:10.591Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","institute":"Some other school","osid":"1-62da9fc1-e172-457b-b150-34e5814fe741"}],"identityDetails":{"osid":"1-cca1ed85-36be-41cf-8056-ac14e631fae0","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","osCreatedBy":"","type":"id","value":"37851914666"},"email":"haj@1234.com"}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.426  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Condition after replacing the entries (ATTESTOR#$.experience.[*].instituteOSID#.contains({}))
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.426 DEBUG 1 --- [nio-8082-exec-8] c.j.jsonpath.internal.path.CompiledPath  : Evaluating path: $['experience'][*]['instituteOSID']
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.426  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Processing pairs condition (ATTESTOR#$.experience.[*].instituteOSID#.contains({})) -> pairs ATTESTOR#$.experience.[*].instituteOSID#, {}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.426  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Resolved conditions ({}.contains({}))
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.427  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Gonna resolve for the json {"osUpdatedAt":"2022-06-30T19:10:10.591Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","subject":"Electrical Kernel","osid":"1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef","osOwner":["d638006b-bfa4-411a-84eb-c1dc176101ee"],"phoneNumber":"72390","osCreatedAt":"2022-06-30T19:10:10.047Z","school":"NIT Surat","contactDetails":{"osid":"1-bd25c7d4-eeb7-4116-98ed-6b9cb8760ab7","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","mobile":"37851914666","osCreatedBy":"","name":"test name 37851914666","email":"37851914666@example.com"},"personalDetails":{"osid":"1-c240d4cb-3343-4742-a6ca-ff69c8a8707d","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","dob":"2020-12-12","osCreatedBy":"","userName":"37851914666"},"name":"Harshil","osCreatedBy":"","experience":[{"osUpdatedAt":"2022-06-30T19:10:10.591Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","institute":"Some other school","osid":"1-62da9fc1-e172-457b-b150-34e5814fe741"}],"identityDetails":{"osid":"1-cca1ed85-36be-41cf-8056-ac14e631fae0","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","osCreatedBy":"","type":"id","value":"37851914666"},"email":"haj@1234.com"}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.427  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Condition after replacing the entries (ATTESTOR#$.experience.[*].instituteOSID#.contains({}))
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.427 DEBUG 1 --- [nio-8082-exec-8] c.j.jsonpath.internal.path.CompiledPath  : Evaluating path: $['experience'][*]['instituteOSID']
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.427  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Processing pairs condition (ATTESTOR#$.experience.[*].instituteOSID#.contains({})) -> pairs ATTESTOR#$.experience.[*].instituteOSID#, {}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.427  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Resolved conditions ({}.contains({}))
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.428  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Gonna resolve for the json {"osUpdatedAt":"2022-06-30T19:10:10.591Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","subject":"Electrical Kernel","osid":"1-fbe2bdb1-ef44-4053-b0dc-ea7ebbef57ef","osOwner":["d638006b-bfa4-411a-84eb-c1dc176101ee"],"phoneNumber":"72390","osCreatedAt":"2022-06-30T19:10:10.047Z","school":"NIT Surat","contactDetails":{"osid":"1-bd25c7d4-eeb7-4116-98ed-6b9cb8760ab7","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","mobile":"37851914666","osCreatedBy":"","name":"test name 37851914666","email":"37851914666@example.com"},"personalDetails":{"osid":"1-c240d4cb-3343-4742-a6ca-ff69c8a8707d","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","dob":"2020-12-12","osCreatedBy":"","userName":"37851914666"},"name":"Harshil","osCreatedBy":"","experience":[{"osUpdatedAt":"2022-06-30T19:10:10.591Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","institute":"Some other school","osid":"1-62da9fc1-e172-457b-b150-34e5814fe741"}],"identityDetails":{"osid":"1-cca1ed85-36be-41cf-8056-ac14e631fae0","osUpdatedAt":"2022-06-30T19:10:10.591Z","osCreatedAt":"2022-06-30T19:10:10.047Z","osUpdatedBy":"d638006b-bfa4-411a-84eb-c1dc176101ee","osCreatedBy":"","type":"id","value":"37851914666"},"email":"haj@1234.com"}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.428  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Condition after replacing the entries (ATTESTOR#$.experience.[*].instituteOSID#.contains({}))
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.428 DEBUG 1 --- [nio-8082-exec-8] c.j.jsonpath.internal.path.CompiledPath  : Evaluating path: $['experience'][*]['instituteOSID']
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.428  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Processing pairs condition (ATTESTOR#$.experience.[*].instituteOSID#.contains({})) -> pairs ATTESTOR#$.experience.[*].instituteOSID#, {}
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.428  INFO 1 --- [nio-8082-exec-8] d.s.r.m.s.ConditionResolverService       : Resolved conditions ({}.contains({}))
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.429 DEBUG 1 --- [nio-8082-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, application/x-jackson-smile, application/cbor, application/*+json] and supported [application/json, application/*+json, application/json, application/*+json]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.429 DEBUG 1 --- [nio-8082-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.431 DEBUG 1 --- [nio-8082-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.431 DEBUG 1 --- [nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.431 DEBUG 1 --- [nio-8082-exec-8] o.a.coyote.http11.Http11InputBuffer      : Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [313]
+[33;1mregistry_1      |[0m 19:10:11.431 [http-nio-8081-exec-9] INFO  d.s.r.c.RegistryClaimsController:65 - Received 0 claims
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.432 DEBUG 1 --- [nio-8082-exec-8] o.a.tomcat.util.net.SocketWrapperBase    : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@531e4739:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56320]], Read from buffer: [0]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.432 DEBUG 1 --- [nio-8082-exec-8] org.apache.tomcat.util.net.NioEndpoint   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@531e4739:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56320]], Read direct from socket: [0]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.432 DEBUG 1 --- [nio-8082-exec-8] o.a.coyote.http11.Http11InputBuffer      : Received []
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.432 DEBUG 1 --- [nio-8082-exec-8] o.apache.coyote.http11.Http11Processor   : Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@531e4739:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56320]], Status in: [OPEN_READ], State out: [OPEN]
+[36mclaim-ms_1      |[0m 2022-06-30 19:10:11.432 DEBUG 1 --- [nio-8082-exec-8] org.apache.tomcat.util.net.NioEndpoint   : Registered read interest for [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@531e4739:org.apache.tomcat.util.net.NioChannel@668ee18b:java.nio.channels.SocketChannel[connected local=/172.20.0.8:8082 remote=/172.20.0.7:56320]]

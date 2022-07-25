@@ -16,9 +16,18 @@
       "type": "object",
       "title": "The Teacher Schema",
       "required": [
-
+        "name",
+        "phoneNumber",
+        "email",
+        "subject",
+        "school"
       ],
       "properties": {
+				"name": { "type": "string" },
+				"phoneNumber": { "type": "string" },
+				"email": { "type": "string" },
+				"subject":{ "type": "string"},
+				"school": { "type": "string" },
         "identityDetails": {
           "$ref": "Common.json/#/definitions/IdentityDetails"
         },
