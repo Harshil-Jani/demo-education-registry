@@ -23,11 +23,21 @@
         "school"
       ],
       "properties": {
-				"name": { "type": "string" },
-				"phoneNumber": { "type": "string" },
-				"email": { "type": "string" },
-				"subject":{ "type": "string"},
-				"school": { "type": "string" },
+        "name": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "school": {
+          "type": "string"
+        },
         "identityDetails": {
           "$ref": "Common.json/#/definitions/IdentityDetails"
         },
@@ -103,7 +113,9 @@
       }
     ],
     "internalFields": [],
-    "inviteRoles":["anonymous"],
+    "inviteRoles": [
+      "anonymous"
+    ],
     "enableLogin": true,
     "ownershipAttributes": [
       {
